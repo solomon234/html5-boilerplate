@@ -1,3 +1,7 @@
+.container ol {
+  list-style: none;
+}
+
 .toggle-btn-visible {
     display: block;
 }
