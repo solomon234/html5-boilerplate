@@ -2,15 +2,15 @@
     display: block;
 }
 .toggle-btn {
-	width = 1vw;
-
-    cursor: pointer;
-    border: 2px solid #cf7abe03;
-    background-color: white;
-    padding: 2px;
-    font-size: 60%;
-    text-align: center;
-    margin-top: 10px;
+  width = 1vw;
+  cursor: pointer;
+  border: 2px solid #cf7abe03;
+  background-color: white;
+  padding: 2px;
+  font-size: 60%;
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Exo 2', sans-serif;
 }
 
 
