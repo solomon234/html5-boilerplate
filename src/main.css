@@ -2,6 +2,10 @@
     display: block;
 }
 .toggle-btn {
+  transition: all 0.5s;
+  cursor: pointer;
+
+
   width = 1vw;
   cursor: pointer;
   border: 2px solid #cf7abe03;
