@@ -4,25 +4,29 @@
 
 
 .toggle-btn {
-  transition: all 0.5s;
+  transition: border 0.5s;
   cursor: pointer;
   letter-spacing: 1.5px;
   border-bottom: 2px solid black;
   width = 1vw;
   cursor: pointer;
-  border-top: 2px solid #cf7abe03;
-  border-left: 2px solid #cf7abe03;
-  background-color: rgb(77,187,220,0.8 );
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  /*background-color: rgb(77,187,220,0.8 ); */
   padding: 2px;
   font-size: 60%;
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
   font-family: 'Exo 2', sans-serif;
 }
 
 .toggle-btn:hover{
   border-bottom-color: green;
-  background-color: rgb(77,187,220,1 );
+  /*transform: translate(50px, 0px);*/
+  width: 70%;
+  transition-delay: width 1.5s ease-out;
 }
 
 
