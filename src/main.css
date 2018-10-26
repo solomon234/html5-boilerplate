@@ -7,12 +7,10 @@
   transition: border 0.5s;
   cursor: pointer;
   letter-spacing: 1.5px;
-  border-bottom: 2px solid black;
+  /*border-bottom: 2px solid black;*/
   width = 1vw;
   cursor: pointer;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border: none;
   background: none;
   /*background-color: rgb(77,187,220,0.8 ); */
   padding: 2px;
