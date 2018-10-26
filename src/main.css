@@ -26,7 +26,9 @@
   border-bottom-color: green;
   /*transform: translate(50px, 0px);*/
   width: 70%;
-  transition-delay: width 1.5s ease-out;
+  transform: translateX(100px);
+  transition: all 3s;
+  /*transition: all 3s;*/
 }
 
 
