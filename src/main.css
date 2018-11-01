@@ -1,3 +1,29 @@
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+  float:left;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid green;
+}
+.lensImg{
+  height: 25vh;
+  position: relative;
+}
+.lensImg img {
+  width:17vw;
+  height:22vh;
+}
 .container ol {
   list-style: none;
 }
@@ -21,10 +47,10 @@
 }
 
 .toggle-btn:hover{
-  border-bottom-color: green;
-  /*transform: translate(50px, 0px);*/
+  /*border-bottom-color: green;
+  transform: translate(50px, 0px);*/
   width: 70%;
-  transform: translateX(100px);
+  transform: translateX(70px);
   transition: all 3s;
   /*transition: all 3s;*/
 }
@@ -55,7 +81,6 @@ body {
   display: inline-block;
   padding: 0em 2em;
   box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
-
 }
 
 .container .navigation {
@@ -92,7 +117,7 @@ body {
 }
 .container .sign-form {
   width: 53.5vw;
-  height: 100vh;
+  height: 150vh;
   text-align: left;
   margin: 85px 0 0 0;
 }
@@ -114,39 +139,40 @@ body {
   list-style: none;
   -webkit-transition: height 0.4s;
   transition: height 0.4s;
-  width: 88%;
+  width: 6.5vw;
   display: inline-block;
-  height: 80px;
+  height: 1vh;
 }
 .container .sign-form .questions li {
-  position: absolute;
-  width: 500px;
+  /*position: absolute;*/
+  width: 4vw;
 
 }
 .container .sign-form .questions li span {
   display: block;
   margin-bottom: 10px;
 }
-.container .sign-form .questions li input {
-  width: 100%;
+.container .sign-form .questions li button {
+  width: 45vw;
   font-size: 0.9em;
-  color: #f2f2f2;
-  margin: 0.3em 0 1em 0;
+  /*margin: 0.3em 0 1em 0;*/
   border: none;
   background: none;
-  border-bottom: 3px solid #fff;
   padding: 0.5em 0.1em;
   transition: all 0.5s ease;
 }
+/*
 .container .sign-form .questions li input:focus {
   outline: none;
   border-bottom: 3px solid #6A79A6;
-}
+}*/
+/* if not first child it doesnt display
+
 .container .sign-form .questions li:not(:first-child) {
   opacity: 0;
   margin-top: 150px;
 }
-
+*/
 .container .sign-form .questions li #phone {
   padding-left: 5em;
 }
