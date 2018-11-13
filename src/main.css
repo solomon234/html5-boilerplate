@@ -7,10 +7,56 @@
     float: left;
 	font-size: 0;
 }
-#firstImg:hover~#fullRim{
+#fullRimImg:hover~#fullRim{
    font-size: 70%;
    transition-duration: .4s;
 }
+
+
+#semiRim {
+	white-space: nowrap;
+	height: 250px;
+    width:250px;
+    float: left;
+	font-size: 0;
+}
+#semiRimImg:hover~#semiRim{
+	font-size: 70%;
+	transition-duration: .4s;
+}
+#noRim {
+	white-space: nowrap;
+	height: 250px;
+    width:250px;
+    float: left;
+	font-size: 0;
+}
+#RimlessImg:hover~#noRim{
+	font-size: 70%;
+	transition-duration: .4s;
+}
+
+/*David 11/13/18*/
+#fullRimImg:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+	transition-duration: .7s;
+}
+#semiRimImg:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+	transition-duration: .7s;
+}
+#RimlessImg:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+	transition-duration: .7s;
+}
+/*David 11/13/18*/
+
 /* David 11/13/18 edit p-tag*/
 
 
@@ -87,14 +133,6 @@ aside .aside-container {
   position: relative;
 }
 
-/*David 11/13/18*/
-#firstImg:hover {
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2); 
-	transition-duration: .7s;
-}
-/*David 11/13/18*/
 
 .lensImg img {
   width: 17vw;
