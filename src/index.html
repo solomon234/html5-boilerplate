@@ -2,97 +2,177 @@
 <html class="no-js" lang="">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Lens Page</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Lens Page</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <!--[if lte IE 9]>
+  <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <p>Lense's Page</p>
-    <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
-    <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')
+  <!-- Add your site or application content here -->
+  <p>Lense's Page</p>
+  <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
+  <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')
     </script>
-    <script src="js/plugins.js"></script>
-   <!-- <script src="js/main.js"></script> -->
+  <script src="js/plugins.js"></script>
+  <!-- <script src="js/main.js"></script> -->
 
-    <div class="container">
+  <div class="container">
+    <section>
+      <aside>
+        <div class="aside-container">
+          <h4 style="border-bottom:1px solid black;">Summary</h4>
+          <p>Frame Type: </p>
+          <p>Lens Style: </p>
+          <p>Progressive Lens Tech: </p>
+          <p>Lens Material: </p>
+          <p>Lens Add-ons: </p>
+          <h3>Total:  0</h3>
 
-        <form id="sign-form" class="sign-form">
-            <ul class="questions">
-                <li>
-                    <button class="toggle-btn" id="fType">Frame Type</button>
-                    <ol class="lensImg">
+        </div>
+      </aside>
+      <form id="sign-form" class="sign-form">
+        <ul class="questions">
+          <li>
+            <button class="toggle-btn" id="fType">Frame Type</button>
+            <ol class="lensImg">
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small" checked>
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <button class="toggle-btn">Lens Style</button>
+            <ol class="lensImg">
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small" checked>
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-bf.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-p.png">
+                </label>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <button class="toggle-btn">Progressive Lens Technology</button>
+            <ol class="lensImg">
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small" checked>
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <button class="toggle-btn">Lens Material</button>
+            <ol class="lensImg">
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small" checked>
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <button class="toggle-btn">Lens Add-ons</button>
+            <ol class="lensImg">
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small" checked>
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+            </ol>
+          </li>
+        </ul>
+        <div class="error-message"></div>
+      </form>
+    </section>
 
 
-                    </ol>
-                </li>
-                <li>
-                    <button class="toggle-btn">Lens Style</button>
-                    <ol class="lensImg">
-                         <li>
-                           <label>
-                             <input type="radio" name="test" value="small" checked>
-                             <img src="img/lens-sv.png">
-                           </label>
-                         </li>
-                         <li>
-                           <label>
-                             <input type="radio" name="test" value="small"  >
-                            <img src="img/lens-sv.png">
-                          </label>
-                         </li>
-                         <li>
-                           <label>
-                             <input type="radio" name="test" value="small" >
-                            <img src="img/lens-sv.png">
-                          </label>
-                         </li>
-                    </ol>
-                </li>
-                <li>
-                    <button class="toggle-btn" >Progressive Lens Technology</button>
-                    <ol class="lensImg">
+    <h1 id="wf" style="opacity:0;width: 600px; margin-top:1.1em;display:none; margin-bottom:1em">Thank you</h1>
 
-                    </ol>
-                </li>
-                <li>
-                    <button class="toggle-btn" >Lens Material</button>
-                    <ol class="lensImg">
-
-                    </ol>
-                </li>
-                <li>
-                    <button class="toggle-btn" >Lens Add-ons</button>
-                    <ol class="lensImg">
-
-                    </ol>
-                </li>
-
-            </ul>
-            <div class="error-message"></div>
-
-        </form>
-        <h1 id="wf" style="opacity:0;width: 600px; margin-top:1.1em;display:none; margin-bottom:1em">Thank you</h1>
-
-      <!--  <script src="js/main.js"></script> -->
+    <!--  <script src="js/main.js"></script> -->
 </body>
 
 </html>

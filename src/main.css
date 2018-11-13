@@ -1,9 +1,50 @@
-.container .sign-form .questions ol li{
+
+/* Aside summary container*/
+.total-price{
+  text-align:right;
+}
+aside h4 {
+  background-color: lightgray;
+  text-align: left;
+  font-size: .75em;
+}
+aside h3{
+  text-align: left;
+  font-size: .75em;
+}
+aside p {
+  font-size: .3em;
+  text-align: left;
+  margin-top:.3em;
+}
+
+aside {
+  width: 31vw;
+  background-color: gray;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+aside .aside-container {
+  font-family: 'Exo 2', sans-serif;
+  width: 30vw;
+  right: 0;
+  margin-right: 40px;
+  border-style: outset;
+  border-color: rgb(77, 187, 250, 0.4);
+  border-radius: 10px;
+  background-color: white;
+  position: fixed;
+  height: 50vh;
+}
+
+.container .sign-form .questions ol li {
   float: left;
   list-style: none;
   width: 17vw;
 }
-.container .sign-form .questions ol{
+
+.container .sign-form .questions ol {
   width: 53vw;
 }
 
@@ -16,34 +57,34 @@
 }
 
 /* IMAGE STYLES */
-[type=radio] + img {
+[type=radio]+img {
   cursor: pointer;
-  float:left;
+  float: left;
 }
 
 /* CHECKED STYLES */
-[type=radio]:checked + img {
+[type=radio]:checked+img {
   outline: 2px solid green;
 }
-.lensImg{
+
+.lensImg {
   height: 25vh;
   position: relative;
 }
+
 .lensImg img {
-  width:17vw;
-  height:23vh;
-}
-.container ol {
-
+  width: 17vw;
+  height: 28vh;
 }
 
+.container ol {}
 
 .toggle-btn {
   transition: border 0.5s;
   cursor: pointer;
   letter-spacing: 1.5px;
   /*border-bottom: 2px solid black;*/
-  width = 1vw;
+  width=1vw;
   cursor: pointer;
   border: none;
   background: none;
@@ -55,25 +96,27 @@
   font-family: 'Exo 2', sans-serif;
 }
 
-.toggle-btn:hover{
-  /*border-bottom-color: green;
-  transform: translate(50px, 0px);*/
+/*
+.toggle-btn:hover {
+  border-bottom-color: green;
+  transform: translate(50px, 0px);
   width: 70%;
   transform: translateX(70px);
   transition: all 3s;
-  /*transition: all 3s;*/
+  transition: all 3s;
 }
-
-
+*/
 * {
   margin: 0;
   padding: 0;
 }
+
 *,
 *:after,
 *:before {
   box-sizing: border-box;
 }
+
 body {
   background-repeat: no-repeat;
   background-color: white;
@@ -84,12 +127,13 @@ body {
   font-size: 4.0vw !important;
   font-weight: bold;
 }
+
 .container {
-  background: rgb(77,187,220,0.4 );
+  background: rgb(77, 187, 220, 0.4);
   color: black;
   display: inline-block;
-  padding: 0em 2em;
   box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 .container .sign-form {
@@ -98,6 +142,7 @@ body {
   text-align: left;
   margin: 85px 0 0 0;
 }
+
 .container .sign-form #next-page {
   opacity: 0;
   width: 40px;
@@ -108,10 +153,12 @@ body {
   background: url("https://jdniki.github.io/signup/images/next-page.svg");
   background-size: contain;
 }
+
 .container .sign-form #next-page:hover {
   background: url("https://jdniki.github.io/signup/images/next-pagehover.svg");
   background-size: contain;
 }
+
 .container .sign-form .questions {
   list-style: none;
   -webkit-transition: height 0.4s;
@@ -120,15 +167,17 @@ body {
   /*display: inline-block; */
   height: 1vh;
 }
+
 .container .sign-form .questions li {
   /*position: absolute;*/
   width: 4vw;
-
 }
+
 .container .sign-form .questions li span {
   display: block;
   margin-bottom: 10px;
 }
+
 .container .sign-form .questions li button {
   width: 45vw;
   font-size: 0.9em;
@@ -138,6 +187,7 @@ body {
   padding: 0.5em 0.1em;
   transition: all 0.5s ease;
 }
+
 /*
 .container .sign-form .questions li input:focus {
   outline: none;
@@ -150,44 +200,51 @@ body {
   margin-top: 150px;
 }
 */
-
 .container .error-message {
   color: rgba(207, 0, 0, 0.56);
   font-size: 14px;
   margin-top: 10px;
   padding-bottom: 30px;
 }
+
 ::-webkit-input-placeholder {
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.7);
 }
+
 :-moz-placeholder {
   /* Firefox 18- */
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.7);
 }
+
 ::-moz-placeholder {
   /* Firefox 19+ */
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.7);
 }
+
 :-ms-input-placeholder {
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.7);
 }
+
 @-webkit-keyframes moveUpFromDown {
   from {
     -webkit-transform: translateY(100%);
   }
+
   to {
     -webkit-transform: translateY(0);
   }
 }
+
 @keyframes moveUpFromDown {
   from {
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
   }
+
   to {
     -webkit-transform: translateY(0);
     transform: translateY(0);
