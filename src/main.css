@@ -1,87 +1,81 @@
 /* David 11/13/18 edit p-tag*/
-#fullRim {
-	
+/* Solomon Shortened the code a little to avoid redunancy*/
+.picText{
 	white-space: nowrap;
-	height: 250px;
-    width:250px;
-    float: left;
+	width: 250px;
+	float: left;
 	font-size: 0;
-}
-#fullRimImg:hover~#fullRim{
-   font-size: 70%;
-   transition-duration: .4s;
 }
 
+#fullRimImg:hover~.picText {
+  font-size: 30%;
+  transition-duration: .2s;
+}
 
-#semiRim {
-	white-space: nowrap;
-	height: 250px;
-    width:250px;
-    float: left;
-	font-size: 0;
+#semiRimImg:hover~.picText {
+  font-size: 30%;
+  transition-duration: .2s;
 }
-#semiRimImg:hover~#semiRim{
-	font-size: 70%;
-	transition-duration: .4s;
-}
-#noRim {
-	white-space: nowrap;
-	height: 250px;
-    width:250px;
-    float: left;
-	font-size: 0;
-}
-#RimlessImg:hover~#noRim{
-	font-size: 70%;
-	transition-duration: .4s;
+
+#RimlessImg:hover~.picText {
+  font-size: 30%;
+  transition-duration: .2s;
 }
 
 /*David 11/13/18*/
 #fullRimImg:hover {
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2); 
-	transition-duration: .7s;
+  -ms-transform: scale(1.2);
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
+  transition-duration: .7s;
 }
+
 #semiRimImg:hover {
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2); 
-	transition-duration: .7s;
+  -ms-transform: scale(1.2);
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
+  transition-duration: .7s;
 }
+
 #RimlessImg:hover {
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2); 
-	transition-duration: .7s;
+  -ms-transform: scale(1.2);
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
+  transition-duration: .7s;
 }
+
 /*David 11/13/18*/
-
 /* David 11/13/18 edit p-tag*/
-
-
 /* Aside summary container*/
-.total-price{
-  text-align:right;
+.total-price {
+  text-align: right;
 }
+
 aside h4 {
   background-color: lightgray;
   text-align: left;
   font-size: .75em;
 }
-aside h3{
+
+aside h3 {
   text-align: left;
   font-size: .75em;
 }
+
 aside p {
   font-size: .3em;
   text-align: left;
-  margin-top:.3em;
+  margin-top: .3em;
 }
 
 aside {
   width: 31vw;
-  background-color: gray;
   z-index: -1;
   border-radius: 10px;
 }
@@ -131,8 +125,8 @@ aside .aside-container {
 .lensImg {
   height: 25vh;
   position: relative;
+	display: none;
 }
-
 
 .lensImg img {
   width: 17vw;
@@ -172,8 +166,8 @@ aside .aside-container {
   margin: 0;
   padding: 10px;
 }
-/*David changed padding to 10px */
 
+/*David changed padding to 10px */
 *,
 *:after,
 *:before {
@@ -189,7 +183,6 @@ body {
   text-align: center;
   font-size: 4.0vw !important;
   font-weight: bold;
-  
 }
 
 .container {

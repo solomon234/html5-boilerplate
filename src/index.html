@@ -12,9 +12,9 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  <!-- Place favicon.ico in the root directory
 
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">-->
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -31,7 +31,7 @@
     window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')
     </script>
   <script src="js/plugins.js"></script>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/show.js"></script>
 
   <div class="container">
     <section>
@@ -48,29 +48,29 @@
         </div>
       </aside>
       <form id="sign-form" class="sign-form">
-        <ul class="questions">
+        <ul class="questions" >
           <li>
-            <button class="toggle-btn" id="fType">Frame Type</button>
-            <ol class="lensImg">
+            <button class="toggle-btn" id="fType" onclick="showList()">Frame Type</button>
+            <ol class="lensImg" id="showFrames">
               <li>
                 <label>
                   <input type="radio" name="test" value="small" checked>
                   <img id ="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-				  <p id="fullRim"> Full-Rimmed Frame </p> <!-- David 11/13/18 Added new text-->
+				  <p class="picText"> Full-Rimmed Frame </p> <!-- David 11/13/18 Added new text-->
                 </label>
               </li>
               <li>
                 <label>
                   <input type="radio" name="test" value="small">
                   <img id ="semiRimImg" src="img/lens-sv.png">
-				  <p id="semiRim"> Semi-Rimless Frame </p>
+				  <p class="picText"> Semi-Rimless Frame </p>
                 </label>
               </li>
               <li>
                 <label>
                   <input type="radio" name="test" value="small">
                   <img id = "RimlessImg" src="img/lens-sv.png">
-				  <p id="noRim"> Rimless Frame </p>
+				  <p class="picText"> Rimless Frame </p>
                 </label>
               </li>
             </ol>
