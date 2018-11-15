@@ -1,18 +1,18 @@
 jQuery(document).ready(function() {
   $("#fType").click(function() {
-    $("#showFrames").toggle();
+    $("#showFrames").toggle("fast");
   });
   $("#lStyle").click(function() {
-    $("#showLStyle").toggle();
+    $("#showLStyle").toggle("fast");
   });
   $("#progLTech").click(function() {
-    $("#showPLT").toggle();
+    $("#showPLT").toggle("fast");
   });
   $("#lMaterial").click(function() {
-    $("#showLMaterial").toggle();
+    $("#showLMaterial").toggle("fast");
   });
   $("#lAddOn").click(function() {
-    $("#showLAddOn").toggle();
+    $("#showLAddOn").toggle("fast");
   });
 
 });
