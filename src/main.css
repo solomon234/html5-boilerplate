@@ -1,16 +1,157 @@
-/* ID's will be individually diaplying none*/
+/*heading image*/
+.heading-image {
+  background-image: linear-gradient(rgba(230, 235, 224, 0.25) , transparent), url("img/banner.jpg");
+  height: 60%;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+	margin-bottom:15px;
+}
+.lens-heading{
+	text-align: left;
+font-size: .5em;
 
-#showLStyle,#showFrames,#showPLT,#showLAddOn,#showLMaterial{
-		display: none;
+}
+/*tool tip for each step*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+	float: right;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* nav progress bar */
+/* Global CSS, you probably don't need that */
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+}
+
+.nav {
+  margin-top: 40px;
+}
+
+.pull-right {
+  float: right;
+}
+
+/* Breadcrups CSS */
+.arrow-steps .step {
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+  cursor: default;
+  margin: 0 3px;
+  padding: 10px 10px 10px 30px;
+  min-width: 180px;
+  float: left;
+  position: relative;
+  background-color: #d9e3f7;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.arrow-steps .step:after,
+.arrow-steps .step:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: -17px;
+  width: 0;
+  height: 0;
+  border-top: 19px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 17px solid #d9e3f7;
+  z-index: 2;
+  transition: border-color 0.2s ease;
+}
+
+.arrow-steps .step:before {
+  right: auto;
+  left: 0;
+  border-left: 17px solid #BFDBF7;
+  z-index: 0;
+}
+
+.arrow-steps .step:first-child:before {
+  border: none;
+}
+
+.arrow-steps .step:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.arrow-steps .step span {
+  position: relative;
+}
+
+.arrow-steps .step span:before {
+  opacity: 0;
+  content: "✔";
+  position: absolute;
+  top: -2px;
+  left: -20px;
+}
+
+.arrow-steps .step.done span:before {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease 0.5s;
+  -moz-transition: opacity 0.3s ease 0.5s;
+  -ms-transition: opacity 0.3s ease 0.5s;
+  transition: opacity 0.3s ease 0.5s;
+}
+
+.arrow-steps .step.current {
+  color: #fff;
+  background-color: #23468c;
+}
+
+.arrow-steps .step.current:after {
+  border-left: 17px solid #23468c;
+}
+
+/* ID's will be individually diaplying none*/
+#showLStyle, #showFrames, #showPLT, #showLAddOn, #showLMaterial {
+  display: none;
 }
 
 /* David 11/13/18 edit p-tag*/
 /* Solomon Shortened the code a little to avoid redunancy*/
-.picText{
-	white-space: nowrap;
-	width: 250px;
-	float: left;
-	font-size: 0;
+.picText {
+  white-space: nowrap;
+  width: 250px;
+  float: left;
+  font-size: 0;
 }
 
 #fullRimImg:hover~.picText {
@@ -65,7 +206,7 @@
 
 aside h4 {
   background-color: lightgray;
-	border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
   text-align: left;
   font-size: .75em;
 }
@@ -156,7 +297,6 @@ aside .aside-container {
   font-family: 'Exo 2', sans-serif;
 }
 
-
 /*
 .toggle-btn:hover {
   border-bottom-color: green;
@@ -182,8 +322,8 @@ aside .aside-container {
 body {
   background-repeat: no-repeat;
   background-color: white;
-  color: #fff;
-  font-family: "Helvetica", "Helvetica Neue Light", sans-serif;
+/*  color: #fff;*/
+  font-family: 'Exo 2', sans-serif;
   font-weight: 100;
   text-align: center;
   font-size: 4.0vw !important;
@@ -196,11 +336,11 @@ body {
   display: inline-block;
   box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
   width: 100%;
-	height:100%;
-	border-top-left-radius:10px;
-	border-bottom-left-radius: 10px;
-	border-top-right-radius:50px;
-	border-bottom-right-radius: 50px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .container .sign-form {
@@ -266,7 +406,6 @@ body {
   opacity: 0;
 }
 */
-
 .container .error-message {
   color: rgba(207, 0, 0, 0.56);
   font-size: 14px;
