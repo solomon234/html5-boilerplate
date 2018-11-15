@@ -1,8 +1,18 @@
-function showList() {
-    var x = document.getElementById("showFrames");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
+jQuery(document).ready(function() {
+  $("#fType").click(function() {
+    $("#showFrames").toggle();
+  });
+  $("#lStyle").click(function() {
+    $("#showLStyle").toggle();
+  });
+  $("#progLTech").click(function() {
+    $("#showPLT").toggle();
+  });
+  $("#lMaterial").click(function() {
+    $("#showLMaterial").toggle();
+  });
+  $("#lAddOn").click(function() {
+    $("#showLAddOn").toggle();
+  });
+
+});

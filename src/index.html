@@ -25,13 +25,10 @@
 
   <!-- Add your site or application content here -->
   <p>Lense's Page</p>
-  <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
-  <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')
-    </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/show.js"></script>
+
 
   <div class="container">
     <section>
@@ -43,44 +40,45 @@
           <p>Progressive Lens Tech: </p>
           <p>Lens Material: </p>
           <p>Lens Add-ons: </p>
-          <h3>Total:  0</h3>
+          
+          <h3>Total: 0</h3>
 
         </div>
       </aside>
-      <form id="sign-form" class="sign-form">
-        <ul class="questions" >
+      <form id="sign-form" class="sign-form" method="GET">
+        <ul class="questions">
           <li>
-            <button class="toggle-btn" id="fType" onclick="showList()">Frame Type</button>
+            <div class="toggle-btn" type="hidden" id="fType">Frame Type</div>
             <ol class="lensImg" id="showFrames">
               <li>
                 <label>
-                  <input type="radio" name="test" value="small" checked>
-                  <img id ="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-				  <p class="picText"> Full-Rimmed Frame </p> <!-- David 11/13/18 Added new text-->
+                  <input type="radio" name="test" value="small">
+                  <img id="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
+                  <p class="picText"> Full-Rimmed Frame </p> <!-- David 11/13/18 Added new text-->
                 </label>
               </li>
               <li>
                 <label>
                   <input type="radio" name="test" value="small">
-                  <img id ="semiRimImg" src="img/lens-sv.png">
-				  <p class="picText"> Semi-Rimless Frame </p>
+                  <img id="semiRimImg" src="img/lens-sv.png">
+                  <p class="picText"> Semi-Rimless Frame </p>
                 </label>
               </li>
               <li>
                 <label>
                   <input type="radio" name="test" value="small">
-                  <img id = "RimlessImg" src="img/lens-sv.png">
-				  <p class="picText"> Rimless Frame </p>
+                  <img id="RimlessImg" src="img/lens-sv.png">
+                  <p class="picText"> Rimless Frame </p>
                 </label>
               </li>
             </ol>
           </li>
           <li>
-            <button class="toggle-btn">Lens Style</button>
-            <ol class="lensImg">
+            <div class="toggle-btn" id="lStyle">Lens Style</div>
+            <ol class="lensImg" id="showLStyle">
               <li>
                 <label>
-                  <input type="radio" name="test" value="small" checked>
+                  <input type="radio" name="test" value="small">
                   <img src="img/lens-sv.png">
                 </label>
               </li>
@@ -99,34 +97,11 @@
             </ol>
           </li>
           <li>
-            <button class="toggle-btn">Progressive Lens Technology</button>
-            <ol class="lensImg">
-              <li>
-                <label>
-                  <input type="radio" name="test" value="small" checked>
-                  <img src="img/lens-sv.png">
-                </label>
-              </li>
+            <div class="toggle-btn" id="progLTech">Progressive Lens Technology</div>
+            <ol class="lensImg" id="showPLT">
               <li>
                 <label>
                   <input type="radio" name="test" value="small">
-                  <img src="img/lens-sv.png">
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" name="test" value="small">
-                  <img src="img/lens-sv.png">
-                </label>
-              </li>
-            </ol>
-          </li>
-          <li>
-            <button class="toggle-btn">Lens Material</button>
-            <ol class="lensImg">
-              <li>
-                <label>
-                  <input type="radio" name="test" value="small" checked>
                   <img src="img/lens-sv.png">
                 </label>
               </li>
@@ -145,11 +120,34 @@
             </ol>
           </li>
           <li>
-            <button class="toggle-btn">Lens Add-ons</button>
-            <ol class="lensImg">
+            <div class="toggle-btn" id="lMaterial">Lens Material</div>
+            <ol class="lensImg" id="showLMaterial">
               <li>
                 <label>
-                  <input type="radio" name="test" value="small" checked>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
+                  <img src="img/lens-sv.png">
+                </label>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <div class="toggle-btn" id="lAddOn">Lens Add-ons</div>
+            <ol class="lensImg" id="showLAddOn">
+              <li>
+                <label>
+                  <input type="radio" name="test" value="small">
                   <img src="img/lens-sv.png">
                 </label>
               </li>
