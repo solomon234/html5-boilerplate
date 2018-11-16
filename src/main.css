@@ -35,6 +35,7 @@ font-size: .5em;
   bottom: 100%;
   left: 50%;
   margin-left: -60px;
+
   /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
   opacity: 0;
   transition: opacity 1s;
@@ -45,7 +46,6 @@ font-size: .5em;
 }
 
 /* nav progress bar */
-/* Global CSS, you probably don't need that */
 .clearfix:after {
   clear: both;
   content: "";
@@ -61,7 +61,6 @@ font-size: .5em;
   float: right;
 }
 
-/* Breadcrups CSS */
 .arrow-steps .step {
   font-size: 14px;
   text-align: center;
