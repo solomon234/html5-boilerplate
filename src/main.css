@@ -1,7 +1,8 @@
 /*heading image*/
 .heading-image {
-  background-image: linear-gradient(rgba(230, 235, 224, 0.25) , transparent), url("img/banner.jpg");
-  height: 60%;
+  background-color: linear-gradient(rgba(230, 235, 224, 0.25) , transparent));
+  height: 20vh;
+  width:100%;
 	border-top-right-radius: 15px;
 	border-top-left-radius: 15px;
   background-position: center;
@@ -11,9 +12,9 @@
 	margin-bottom:15px;
 }
 .lens-heading{
-	text-align: left;
-font-size: .5em;
-
+  padding: 2px 1px 3px 45px;
+  text-align: left;
+  font-size: .45em;
 }
 /*tool tip for each step*/
 .tooltip {
@@ -62,23 +63,25 @@ font-size: .5em;
 }
 
 .arrow-steps .step {
-  font-size: 14px;
+  font-size: .3em;
   text-align: center;
   color: #666;
   cursor: default;
   margin: 0 3px;
-  padding: 10px 10px 10px 30px;
-  min-width: 180px;
+  padding: 10px 6px 11px 7px;
+  width: 15vw;
   float: left;
   position: relative;
-  background-color: #d9e3f7;
+  background-color: #fb949400;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   transition: background-color 0.2s ease;
+  border: solid 2px;
 }
 
+/*
 .arrow-steps .step:after,
 .arrow-steps .step:before {
   content: " ";
@@ -93,7 +96,7 @@ font-size: .5em;
   z-index: 2;
   transition: border-color 0.2s ease;
 }
-
+*/
 .arrow-steps .step:before {
   right: auto;
   left: 0;
@@ -129,6 +132,9 @@ font-size: .5em;
   -ms-transition: opacity 0.3s ease 0.5s;
   transition: opacity 0.3s ease 0.5s;
 }
+.arrow-steps .step.done{
+  opacity: .5;
+}
 
 .arrow-steps .step.current {
   color: #fff;
@@ -145,7 +151,7 @@ font-size: .5em;
 }
 
 /* David 11/13/18 edit p-tag*/
-/* Solomon Shortened the code a little to avoid redunancy*/
+/* Solomon: Shortened the code a little to avoid redunancy*/
 .picText {
   white-space: nowrap;
   width: 250px;
@@ -231,12 +237,12 @@ aside .aside-container {
   font-family: 'Exo 2', sans-serif;
   width: 30vw;
   right: 0;
-  margin-right: 40px;
+  margin: 8px 10px;
   border-style: outset;
-  border-color: rgb(77, 187, 250, 0.4);
+  border-color: rgba(255, 0, 0, 0.4);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  background-color: white;
+  background-color: #e9e1e14d;
   position: fixed;
   height: 50vh;
 }
@@ -330,23 +336,17 @@ body {
 }
 
 .container {
-  background: #BFDBF7;
+
   color: black;
   display: inline-block;
-  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
-  width: 100%;
+  width: 90vw;
   height: 100%;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
 }
 
 .container .sign-form {
-  width: 53.5vw;
+  width: 58.5vw;
   height: 100vh;
-  text-align: left;
-  margin: 85px 0 0 0;
+  border: solid #fb9494 2px;
 }
 
 .container .sign-form #next-page {
