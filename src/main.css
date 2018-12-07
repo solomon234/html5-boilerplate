@@ -234,7 +234,7 @@ aside {
 }
 
 aside .aside-container {
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 30vw;
   right: 0;
   margin: 8px 10px;
@@ -299,7 +299,7 @@ aside .aside-container {
   font-size: 60%;
   text-align: left;
   margin-top: 15px;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*
@@ -328,7 +328,7 @@ body {
   background-repeat: no-repeat;
   background-color: white;
 /*  color: #fff;*/
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   text-align: center;
   font-size: 4.0vw !important;
