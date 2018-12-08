@@ -1,6 +1,21 @@
 var counter = 1;
-$(document).ready(function() {
 
+$(document).ready(function() {
+  var windowHeight = jQuery(window).height();
+  var windowScrollPosTop = jQuery(window).scrollTop();
+  var windowScrollPosBottom = windowHeight + windowScrollPosTop;
+  //scroll function
+
+  jQuery(window).scroll(function() {
+
+
+    windowHeight = jQuery(window).height();
+    windowScrollPosTop = jQuery(window).scrollTop();
+    windowScrollPosBottom = windowHeight + windowScrollPosTop;
+    jQuery(".status").html(windowScrollPosBottom);
+
+
+  });
   var erroEle = $('.error-message'),
     focusInput = $('.questions').find('.active');
 
@@ -15,16 +30,16 @@ $(document).ready(function() {
       opacity: 1
     }, 200);
     thisInput.closest('li').prevAll('li').animate({
-        marginTop: '-150px',
-        opacity: 0
-      }, 200)
-      //                     .AddClass('done');
+      marginTop: '-150px',
+      opacity: 0
+    }, 200)
+    //                     .AddClass('done');
 
     thisInput.closest('li').nextAll('li').animate({
-        marginTop: '150px',
-        opacity: 0
-      }, 200)
-      //                    .RemoveClass('done');
+      marginTop: '150px',
+      opacity: 0
+    }, 200)
+    //                    .RemoveClass('done');
     errorMessage(erroEle, '', 'hidden', 0);
 
   });
@@ -159,5 +174,3 @@ function errorMessage(textmeg, appendString, visib, opaci) {
     opacity: opaci
   }).html(appendString)
 }
-
-

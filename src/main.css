@@ -1,6 +1,20 @@
 /*heading image*/
+
+/* test */
+.status{
+  padding: 10px;
+  position:fixed;
+  top:0;
+  right:0;
+  background-color: black;
+  color:white;
+  z-index:900;
+}
+
 .heading-image {
-  background-color: linear-gradient(rgba(230, 235, 224, 0.25) , transparent));
+  background: #CC95C0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 20vh;
   width:100%;
 	border-top-right-radius: 15px;
@@ -152,13 +166,8 @@
 
 /* David 11/13/18 edit p-tag*/
 /* Solomon: Shortened the code a little to avoid redunancy*/
-.picText {
-  white-space: nowrap;
-  width: 250px;
-  float: left;
-  font-size: 0;
-}
 
+/*
 #fullRimImg:hover~.picText {
   font-size: 30%;
   transition-duration: .2s;
@@ -173,34 +182,7 @@
   font-size: 30%;
   transition-duration: .2s;
 }
-
-/*David 11/13/18*/
-#fullRimImg:hover {
-  -ms-transform: scale(1.2);
-  /* IE 9 */
-  -webkit-transform: scale(1.2);
-  /* Safari 3-8 */
-  transform: scale(1.2);
-  transition-duration: .7s;
-}
-
-#semiRimImg:hover {
-  -ms-transform: scale(1.2);
-  /* IE 9 */
-  -webkit-transform: scale(1.2);
-  /* Safari 3-8 */
-  transform: scale(1.2);
-  transition-duration: .7s;
-}
-
-#RimlessImg:hover {
-  -ms-transform: scale(1.2);
-  /* IE 9 */
-  -webkit-transform: scale(1.2);
-  /* Safari 3-8 */
-  transform: scale(1.2);
-  transition-duration: .7s;
-}
+*/
 
 /*David 11/13/18*/
 /* David 11/13/18 edit p-tag*/
@@ -235,58 +217,22 @@ aside {
 
 aside .aside-container {
   font-family: 'Montserrat', sans-serif;
-  width: 30vw;
-  right: 0;
+  width: 28vw;
+  right: 2%;
   margin: 8px 10px;
   border-style: outset;
   border-color: rgba(255, 0, 0, 0.4);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: #e9e1e14d;
-  position: fixed;
+  position: absolute;
   height: 50vh;
 }
 
 .container .sign-form .questions ol li {
-  float: left;
   list-style: none;
-  width: 17vw;
 }
 
-.container .sign-form .questions ol {
-  width: 53vw;
-}
-
-[type=radio] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-/* IMAGE STYLES */
-[type=radio]+img {
-  cursor: pointer;
-  float: left;
-}
-
-/* CHECKED STYLES */
-[type=radio]:checked+img {
-  outline: 2px solid green;
-}
-
-.lensImg {
-  height: 25vh;
-  position: relative;
-}
-
-.lensImg img {
-  width: 17vw;
-  height: 28vh;
-}
-
-.container ol {}
 
 .toggle-btn {
   transition: border 0.5s;
@@ -335,16 +281,62 @@ body {
   font-weight: bold;
 }
 
-.container {
+.optionContainer{
+  border:1px lightgray solid;
+  width:50vw;
+  padding:10px 5px;
+ height: 15vh;
+ position:relative;
 
+}
+.optionContainer ol{
+  position: relative;
+}
+.optionContainer ol li{
+  float:left;
+  left:0;
+  width:100%;
+  position:absolute;
+
+}
+.optionContainer ol li:focus{
+  border:2px red solid;
+  cursor: pointer;
+}
+
+.picText {
+  white-space: nowrap;
+  float:center;
+  font-size:.4em;
+}
+.lensImg {
+  height: 47vh;
+  width: 55vw;
+}
+.botLine{
+  position:absolute;
+  right:0;
+  top:27%;
+  width:82%;
+  border-bottom: 1px lightgray solid;
+}
+
+.optionContainer img {
+  height: 120px;
+  border-right:1px lightgray solid;
+  left:0;
+  position: absolute;
+}
+
+.container {
   color: black;
   display: inline-block;
-  width: 90vw;
+  width: 87vw;
   height: 100%;
 }
 
 .container .sign-form {
-  width: 58.5vw;
+  width: 66%;
   height: 100vh;
   border: solid #fb9494 2px;
 }
@@ -376,6 +368,7 @@ body {
 
 .container .sign-form .questions li {
   /*position: absolute;*/
+  cursor: pointer;
   width: 40vw;
 }
 

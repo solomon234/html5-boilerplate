@@ -29,7 +29,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/show.js"></script>
+  <script src="js/main.js"></script>
   <br />
+  <div class="status"></div>
   <div class="heading-image">
     <div class="lens-heading">Purchase a pair of Premium High Definition Lenses for your Eyeglasses or Sunglasses</div>
     <div class="lens-heading">Browse our vast collection of designer brand frames</div>
@@ -58,31 +60,31 @@
 
         </div>
       </aside>
-      <form id="sign-form" class="sign-form" method="GET">
+      <div class="sign-form">
         <ul class="questions">
           <li>
             <div class="toggle-btn" type="hidden" id="fType">Frame Type</div>
             <ol class="lensImg" id="showFrames">
               <li>
-                <label>
-                  <input type="radio" name="test" value="small">
+                <div class="optionContainer">
                   <img id="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-                  <p class="picText"> Full-Rimmed Frame </p> <!-- David 11/13/18 Added new text-->
-                </label>
+                  <span class="picText"> Full-Rimmed Frame </span> <!-- David 11/13/18 Added new text-->
+                  <span class="botLine"></span>
+              </div>
               </li>
               <li>
-                <label>
-                  <input type="radio" name="test" value="small">
+                <div class="optionContainer">
                   <img id="semiRimImg" src="img/lens-sv.png">
-                  <p class="picText"> Semi-Rimless Frame </p>
-                </label>
+                  <span class="picText"> Semi-Rimless Frame </span>
+                  <span class="botLine"></span>
+                </div>
               </li>
               <li>
-                <label>
-                  <input type="radio" name="test" value="small">
+                <div class="optionContainer">
                   <img id="RimlessImg" src="img/lens-sv.png">
-                  <p class="picText"> Rimless Frame </p>
-                </label>
+                  <span class="picText"> Rimless Frame </span>
+                  <span class="botLine"></span>
+                </div>
               </li>
             </ol>
           </li>
@@ -181,7 +183,7 @@
           </li>
         </ul>
         <div class="error-message"></div>
-      </form>
+      </div>
     </section>
 
 
