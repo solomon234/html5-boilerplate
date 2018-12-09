@@ -31,11 +31,13 @@
   <script src="js/show.js"></script>
   <script src="js/main.js"></script>
   <br />
-  <div class="status"></div>
+  <!--<div class="status"></div>
+
   <div class="heading-image">
     <div class="lens-heading">Purchase a pair of Premium High Definition Lenses for your Eyeglasses or Sunglasses</div>
     <div class="lens-heading">Browse our vast collection of designer brand frames</div>
   </div>
+-->
   <div class="container">
     <section>
 
@@ -50,11 +52,11 @@
       <aside>
         <div class="aside-container">
           <h4 style="border-bottom:1px solid black;">Summary</h4>
-          <p>Frame Type: </p>
-          <p>Lens Style: </p>
-          <p>Progressive Lens Tech: </p>
-          <p>Lens Material: </p>
-          <p>Lens Add-ons: </p>
+          <p>Frame Type: <span class="asideData frameData">Test</span> </p>
+          <p>Lens Style: <span class="asideData lensData"></span></p>
+          <p>Progressive Lens Tech: <span class="asideData progData"></span></p>
+          <p>Lens Material: <span class="asideData materialData"></span></p>
+          <p>Lens Add-ons: <span class="asideData addOnData"></span></p>
 
           <h3>Total: 0</h3>
 
@@ -63,27 +65,33 @@
       <div class="sign-form">
         <ul class="questions">
           <li>
-            <div class="toggle-btn" type="hidden" id="fType">Frame Type</div>
+            <div class="toggle-btn" type="hidden" id="fType" data-ref="frame">Frame Type</div>
             <ol class="lensImg" id="showFrames">
               <li>
                 <div class="optionContainer">
                   <img id="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-                  <span class="picText"> Full-Rimmed Frame </span> <!-- David 11/13/18 Added new text-->
-                  <span class="botLine"></span>
-              </div>
+                  <span class="picText"> Full-Rimmed Frame
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span>
+                  </span> <!-- David 11/13/18 Added new text-->
+                </div>
               </li>
               <li>
                 <div class="optionContainer">
                   <img id="semiRimImg" src="img/lens-sv.png">
-                  <span class="picText"> Semi-Rimless Frame </span>
-                  <span class="botLine"></span>
+                  <span class="picText"> Semi-Rimless Frame
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
+                  </span>
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
                   <img id="RimlessImg" src="img/lens-sv.png">
-                  <span class="picText"> Rimless Frame </span>
-                  <span class="botLine"></span>
+                  <span class="picText"> Rimless Frame
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
+                  </span>
                 </div>
               </li>
             </ol>

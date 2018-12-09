@@ -1,5 +1,13 @@
 jQuery(document).ready(function() {
+ /* Summary Updates */
+ $(function(){
+ $('.lensImg li .optionContainer').on('click', function(){
+     $(this).parent().addClass('lensImgSelect').siblings().removeClass('lensImgSelect');
+   });
+ });
 
+
+/*Nav bar */
   var showLStyle = jQuery("#showLStyle");
   var fType = jQuery("#fType");
   var lStyle = jQuery("#lStyle");

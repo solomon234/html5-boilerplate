@@ -1,25 +1,13 @@
 var counter = 1;
 
 $(document).ready(function() {
-  var windowHeight = jQuery(window).height();
-  var windowScrollPosTop = jQuery(window).scrollTop();
-  var windowScrollPosBottom = windowHeight + windowScrollPosTop;
-  //scroll function
-
-  jQuery(window).scroll(function() {
 
 
-    windowHeight = jQuery(window).height();
-    windowScrollPosTop = jQuery(window).scrollTop();
-    windowScrollPosBottom = windowHeight + windowScrollPosTop;
-    jQuery(".status").html(windowScrollPosBottom);
 
-
-  });
   var erroEle = $('.error-message'),
     focusInput = $('.questions').find('.active');
 
-  $('.navigation a').click(function() {
+  $('.questions li').click(function() {
     nextMaster('navi');
 
     var thisInput = $('#' + $(this).attr('data-ref'));

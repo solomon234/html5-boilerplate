@@ -190,7 +190,11 @@
 .total-price {
   text-align: right;
 }
-
+.asideData{
+  font-size:.9vw;
+  positon:absolute;
+  right:25%;
+  }
 aside h4 {
   background-color: lightgray;
   border-top-right-radius: 15px;
@@ -210,9 +214,12 @@ aside p {
 }
 
 aside {
-  width: 31vw;
+  width: 25%;
   z-index: -1;
   border-radius: 10px;
+  position: absolute;
+  right: 9%;
+  top: 17%;
 }
 
 aside .aside-container {
@@ -225,7 +232,7 @@ aside .aside-container {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: #e9e1e14d;
-  position: absolute;
+  position: relative;
   height: 50vh;
 }
 
@@ -246,6 +253,7 @@ aside .aside-container {
   text-align: left;
   margin-top: 15px;
   font-family: 'Montserrat', sans-serif;
+  width:35%;
 }
 
 /*
@@ -277,31 +285,40 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   text-align: center;
-  font-size: 4.0vw !important;
+  font-size: 3.0vw !important;
   font-weight: bold;
 }
 
 .optionContainer{
   border:1px lightgray solid;
-  width:50vw;
+  width:90%;
   padding:10px 5px;
- height: 15vh;
- position:relative;
-
+  height: 15vh;
+  position:relative;
+}
+.txtDesc{
+  font-size: .9vw;
+  color: #8e444487;
+  position: absolute;
+  width: 53%;
+  left: 19%;
+  top: 39%;
 }
 .optionContainer ol{
   position: relative;
 }
+
 .optionContainer ol li{
   float:left;
   left:0;
   width:100%;
   position:absolute;
 
+
 }
-.optionContainer ol li:focus{
-  border:2px red solid;
-  cursor: pointer;
+.lensImgSelect{
+  border:2px #639eff solid;
+
 }
 
 .picText {
@@ -310,14 +327,20 @@ body {
   font-size:.4em;
 }
 .lensImg {
-  height: 47vh;
-  width: 55vw;
+  height: 53vh;
+  width: 58vw
 }
+
+.lensImg li{
+  cursor: pointer;
+}
+
+
 .botLine{
   position:absolute;
   right:0;
   top:27%;
-  width:82%;
+  width:80%;
   border-bottom: 1px lightgray solid;
 }
 
@@ -326,18 +349,19 @@ body {
   border-right:1px lightgray solid;
   left:0;
   position: absolute;
+  width: 19%;
 }
 
 .container {
   color: black;
   display: inline-block;
-  width: 87vw;
+  width: 95vw;
   height: 100%;
 }
 
 .container .sign-form {
   width: 66%;
-  height: 100vh;
+  height: 70vh;
   border: solid #fb9494 2px;
 }
 
@@ -361,15 +385,9 @@ body {
   list-style: none;
   -webkit-transition: height 0.4s;
   transition: height 0.4s;
-  width: 6.5vw;
-  /*display: inline-block; */
-  height: 1vh;
-}
-
-.container .sign-form .questions li {
-  /*position: absolute;*/
-  cursor: pointer;
-  width: 40vw;
+  width: 60.5vw;
+  /* display: inline-block; */
+  height: 87vh;
 }
 
 .container .sign-form .questions li span {
@@ -387,17 +405,17 @@ body {
   transition: all 0.5s ease;
 }
 
-/*
+
 .container .sign-form .questions li input:focus {
   outline: none;
   border-bottom: 3px solid #6A79A6;
-}*/
-/* if not first child it doesnt display
+}
 
-.container .sign-form li:not(:first-child) {
+
+.container .navigation  li:not(:first-child) {
   opacity: 0;
 }
-*/
+
 .container .error-message {
   color: rgba(207, 0, 0, 0.56);
   font-size: 14px;
