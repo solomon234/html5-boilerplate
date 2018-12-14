@@ -88,7 +88,6 @@ $(document).ready(function() {
 
   $("#password").keyup(function(event) {
     var focusInput = $(this);
-    $("#viewpswd").val(focusInput.val());
     if (focusInput.val().length > 1) {
       $('#next-page').css('opacity', 1);
     }
@@ -112,15 +111,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#show-pwd').mousedown(function() {
-    $(this).toggleClass('view').toggleClass('hide');
-    $('#password').css('opacity', 0);
-    $('#viewpswd').css('opacity', 1);
-  }).mouseup(function() {
-    $(this).toggleClass('view').toggleClass('hide');
-    $('#password').css('opacity', 1);
-    $('#viewpswd').css('opacity', 0);
-  });
+
 
 });
 

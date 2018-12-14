@@ -219,7 +219,7 @@ aside {
   border-radius: 10px;
   position: absolute;
   right: 9%;
-  top: 17%;
+  top: 20%;
 }
 
 aside .aside-container {
@@ -291,7 +291,7 @@ body {
 
 .optionContainer{
   border:1px lightgray solid;
-  width:90%;
+  width:100%;
   padding:10px 5px;
   height: 15vh;
   position:relative;
@@ -300,9 +300,11 @@ body {
   font-size: .9vw;
   color: #8e444487;
   position: absolute;
-  width: 53%;
+  width: 80%;
   left: 19%;
   top: 39%;
+  text-align:left;
+  word-break: break-all;
 }
 .optionContainer ol{
   position: relative;
@@ -360,9 +362,9 @@ body {
 }
 
 .container .sign-form {
-  width: 66%;
+  width: 61vw;
   height: 70vh;
-  border: solid #fb9494 2px;
+  /* border: solid #fb9494 2px; */
 }
 
 .container .sign-form #next-page {
@@ -421,6 +423,33 @@ body {
   font-size: 14px;
   margin-top: 10px;
   padding-bottom: 30px;
+}
+
+@media screen and (max-device-width: 1024px){
+aside {
+    postion: relative;
+    position: unset;
+    width: 100%;
+}
+aside .aside-container{
+  position: unset;
+  width: 100%;
+  font-size: 5vw;
+}
+.container .sign-form .questions {
+    width: 90vw;
+}
+.lensImg{
+  width:100%;
+}
+.optionContainer{
+  font-size:2em;
+}
+.txtDesc{
+  font-size:.6em;
+}
+.toggle-btn{
+  font-size:1em;
 }
 
 ::-webkit-input-placeholder {
