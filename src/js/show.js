@@ -1,13 +1,27 @@
 jQuery(document).ready(function() {
- /* Summary Updates */
- $(function(){
- $('.lensImg li .optionContainer').on('click', function(){
-     $(this).parent().addClass('lensImgSelect').siblings().removeClass('lensImgSelect');
-   });
- });
+
+  // Summary Updates
+  $(function() {
+    $('.lensImg li .optionContainer').on('click', function() {
+      $(this).parent().addClass('lensImgSelect').siblings().removeClass('lensImgSelect');
+
+      var data = $('.lensImgSelect .picText').text();
+      var total = parseInt($('#total').text());
+      var price = $(".lensImgSelect .optionPrice").text();
+      price = price.replace(/\D/g,'');
+      if(!price){
+        price = 0;
+      }
+      var total2 = total + parseInt(price);
+      console.log(total2);
+      $(".frameData").text(data);
+      $("#total").text(total2);
+
+    });
+  });
 
 
-/*Nav bar */
+  /*Nav bar */
   var showLStyle = jQuery("#showLStyle");
   var fType = jQuery("#fType");
   var lStyle = jQuery("#lStyle");
@@ -30,7 +44,7 @@ jQuery(document).ready(function() {
   });
 
 
-// Moves progress bar to next
+  // Moves progress bar to next
   lStyle.bind("click", function() {
     showLStyle.toggle("fast");
     jQuery.each(steps, function(i) {
@@ -42,7 +56,7 @@ jQuery(document).ready(function() {
 
     })
   });
- /* may need for loop to reset addclass
+  /* may need for loop to reset addclass
 
   fType.bind("click", function() {
     jQuery.each(steps, function(i) {
