@@ -1,37 +1,41 @@
 jQuery(document).ready(function() {
-
+  var total = parseInt($('#total').text());
+  $("#showFrames").toggle("fast");
+  $("")
   // Summary Updates
   $(function() {
     $('.lensImg li .optionContainer').on('click', function() {
       $(this).parent().addClass('lensImgSelect').siblings().removeClass('lensImgSelect');
-
       var data = $('.lensImgSelect .picText').text();
       var total = parseInt($('#total').text());
-      var price = $(".lensImgSelect .optionPrice").text();
-      price = price.replace(/\D/g,'');
-      if(!price){
-        price = 0;
-      }
-      var total2 = total + parseInt(price);
-      console.log(total2);
+      var price = $(".lensImgSelect .optionPrice");
       $(".frameData").text(data);
-      $("#total").text(total2);
+      if (!price.hasClass('addedPrice')) {
+        price.addClass('addedPrice');
 
+        price = price.text().replace(/\D/g, '');
+
+        if (!price) {
+          price = 0;
+        }
+        var total2 = total + parseInt(price);
+        //  console.log(price + " " + total);
+
+        $("#total").text(total2);
+      }
     });
   });
 
 
   /*Nav bar */
-  var showLStyle = jQuery("#showLStyle");
-  var fType = jQuery("#fType");
-  var lStyle = jQuery("#lStyle");
-  var steps = jQuery(".step");
+  var showLStyle = $("#showLStyle");
+  var fType = $("#fType");
+  var lStyle = $("#lStyle");
+  var steps = $(".step");
   var form = $('#sign-form');
+
   fType.click(function() {
     $("#showFrames").toggle("fast");
-  });
-  lStyle.click(function() {
-
   });
   $("#progLTech").click(function() {
     $("#showPLT").toggle("fast");
@@ -48,9 +52,9 @@ jQuery(document).ready(function() {
   lStyle.bind("click", function() {
     showLStyle.toggle("fast");
     jQuery.each(steps, function(i) {
-      if (!jQuery(steps[i]).hasClass('current') && !jQuery(steps[i]).hasClass('done')) {
-        jQuery(steps[i]).addClass('current');
-        jQuery(steps[i - 1]).removeClass('current').addClass('done');
+      if (!$(steps[i]).hasClass('current') && !$(steps[i]).hasClass('done')) {
+        $(steps[i]).addClass('current');
+        $(steps[i - 1]).removeClass('current').addClass('done');
         return false;
       }
 

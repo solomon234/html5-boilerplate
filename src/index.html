@@ -42,11 +42,14 @@
     <section>
 
       <div class="arrow-steps clearfix">
-        <div class="step current"> <span> Frame Type</span> </div>
-        <div class="step"> <span>Lens Style</span> </div>
-        <div class="step"> <span>Progressve Lens</span> </div>
-        <div class="step"> <span>Lens Material</span> </div>
-        <div class="step"> <span>Lens Add-Ons</span> </div>
+        <div class="step current"> </div>
+
+      <!-- https://www.jqueryscript.net/demo/Step-Progress-Bar-jQuery-Stepbar/
+      implementing similar design
+      <div class="step"> </div>
+        <div class="step">  </div>
+        <div class="step">  </div>
+        <div class="step"> </div>-->
       </div>
 
       <aside>
@@ -71,17 +74,17 @@
                 <div class="optionContainer">
                   <img id="fullRimImg" src="img/fullframe2.jpg"> <!-- David 11/13/18 Added ID to img-->
                   <div class="picText"> Full-Rimmed Frame </div>
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span>
-                   <!-- David 11/13/18 Added new text-->
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span>
+                  <!-- David 11/13/18 Added new text-->
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
                   <img id="semiRimImg" src="img/semirim.jpg">
                   <div class="picText"> Semi-Rimless Frame </div>
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
                 </div>
               </li>
               <li>
@@ -89,8 +92,8 @@
                   <img id="RimlessImg" src="img/rimless.jpg">
                   <div class="picText"> Rimless Frame </div>
                   <div class="optionPrice">$50</div>
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
                 </div>
               </li>
             </ol>
@@ -100,29 +103,29 @@
             <ol class="lensImg" id="showLStyle">
               <li>
                 <div class="optionContainer">
-                  <img id="fullRimImg" src="img/sv.jpg"> <!-- David 11/13/18 Added ID to img-->
-                  <span class="picText">Single Vision
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Single vision lenses are only distance or reading prescription.</span>
-                  </span> <!-- David 11/13/18 Added new text-->
+                  <img id="RimlessImg" src="img/sv.jpg"> <!-- David 11/13/18 Added ID to img-->
+                  <div class="picText">Single Vision</div>
+                  <div class="optionPrice">$50</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Single vision lenses are only distance or reading prescription.</span><!-- David 11/13/18 Added new text-->
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
-                  <img id="semiRimImg" src="img/bf.jpg">
-                  <span class="picText">Bifocal
-                    <span class="botLine"></span>
-                    <span class="txtDesc">There are 2 different presciptions in a bifocal. <br /> The top could be Distance and the window could be reading.</span>
-                  </span>
+                  <img id="RimlessImg" src="img/bf.jpg">
+                  <div class="picText">Bifocal</div>
+                  <div class="optionPrice">$75</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">There are 2 different presciptions in a bifocal. <br /> The top could be Distance and the window could be reading.</span>
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
                   <img id="RimlessImg" src="img/prog.jpg">
-                  <span class="picText">Progressive
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Distance, Intermediate (Computer), and near all in one.</span>
-                  </span>
+                  <div class="picText">Progressive</div>
+                  <div class="optionPrice">$100</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Distance, Intermediate (Computer), and near all in one.</span>
                 </div>
               </li>
             </ol>
@@ -131,30 +134,29 @@
             <div class="toggle-btn" id="progLTech">Progressive Lens Technology</div>
             <ol class="lensImg" id="showPLT">
               <li>
-                <div class="optionContainer">
-                  <img id="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-                  <span class="picText"> Full-Rimmed Frame
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span>
-                  </span> <!-- David 11/13/18 Added new text-->
+                <div id="RimlessImg" class="optionContainer">
+                  <img src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
+                  <div class="picText"> Conventional HD Progressive </div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span> <!-- David 11/13/18 Added new text-->
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
-                  <img id="semiRimImg" src="img/lens-sv.png">
-                  <span class="picText"> Semi-Rimless Frame
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
-                  </span>
+                  <img src="img/lens-sv.png">
+                  <div class="picText"> Digital HD Progressive </div>
+                  <div class="optionPrice">$50</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
-                  <img id="RimlessImg" src="img/lens-sv.png">
-                  <span class="picText"> Rimless Frame
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
-                  </span>
+                  <img src="img/lens-sv.png">
+                  <div class="picText"> Dual-Digital Progressive </div>
+                  <div class="optionPrice">$100</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
                 </div>
               </li>
             </ol>
@@ -165,28 +167,27 @@
               <li>
                 <div class="optionContainer">
                   <img id="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-                  <span class="picText"> Full-Rimmed Frame
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span>
-                  </span> <!-- David 11/13/18 Added new text-->
+                  <div class="picText"> Plastic </div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span> <!-- David 11/13/18 Added new text-->
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
                   <img id="semiRimImg" src="img/lens-sv.png">
-                  <span class="picText"> Semi-Rimless Frame
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
-                  </span>
+                  <div class="picText"> Polycarbonate </div>
+                  <div class="optionPrice">$50</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Thinner lighter lens typically for prescriptions that are greater than -/+ 3.</span>
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
                   <img id="RimlessImg" src="img/lens-sv.png">
-                  <span class="picText"> Rimless Frame
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
-                  </span>
+                  <div class="picText"> Hi-index 1.67 </div>
+                  <div class="optionPrice">$85</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Thinner and lighter lens that is typically for prescriptions greater than -/+ 6.</span>
                 </div>
               </li>
             </ol>
@@ -196,29 +197,30 @@
             <ol class="lensImg" id="showLAddOn">
               <li>
                 <div class="optionContainer">
-                  <img id="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-                  <span class="picText"> Full-Rimmed Frame
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span>
+                  <img src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
+                  <div class="picText"> Standard Anti Glare </div>
+                  <div class="optionPrice">$45</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Enhances night time driving experience.</span>
                   </span> <!-- David 11/13/18 Added new text-->
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
-                  <img id="semiRimImg" src="img/lens-sv.png">
-                  <span class="picText"> Semi-Rimless Frame
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
-                  </span>
+                  <img src="img/lens-sv.png">
+                  <div class="picText"> Premium Anti Glare </div>
+                  <div class="optionPrice">$75</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">Enhances night time driving experience and much easier to clean.</span>
                 </div>
               </li>
               <li>
                 <div class="optionContainer">
                   <img id="RimlessImg" src="img/lens-sv.png">
-                  <span class="picText"> Rimless Frame
-                    <span class="botLine"></span>
-                    <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
-                  </span>
+                  <div class="picText"> Transitions </div>
+                  <div class="optionPrice">$75</div>
+                  <span class="botLine"></span>
+                  <span class="txtDesc">UV Sensitive lenses that activate under direct sunlight.</span>
                 </div>
               </li>
             </ol>
