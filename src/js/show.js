@@ -1,4 +1,5 @@
 jQuery(document).ready(function() {
+  var baseTot = 0;
   var total = parseInt($('#total').text());
   $("#showFrames").toggle("fast");
   $("")
@@ -10,7 +11,17 @@ jQuery(document).ready(function() {
       var total = parseInt($('#total').text());
       var price = $(".lensImgSelect .optionPrice");
       $(".frameData").text(data);
-      if (!price.hasClass('addedPrice')) {
+
+/*
+      if(!price.length){
+        if($(this).parent().hasClass('.addedPrice')){
+          price = $(this).parent().hasClass('optionPrice addedPrice').text().replace(/\D/g, '');
+          total = total + (price * -1);
+          console.log(total);
+        }
+      }
+*/
+      if (!price.hasClass('addedPrice') && price.length) {
         price.addClass('addedPrice');
 
         price = price.text().replace(/\D/g, '');
@@ -19,10 +30,11 @@ jQuery(document).ready(function() {
           price = 0;
         }
         var total2 = total + parseInt(price);
-        //  console.log(price + " " + total);
+        console.log(price + " " + total);
 
         $("#total").text(total2);
       }
+
     });
   });
 
