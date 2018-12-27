@@ -2,10 +2,7 @@ var counter = 1;
 
 $(document).ready(function() {
 
-
-
-  var erroEle = $('.error-message'),
-    focusInput = $('.questions').find('.active');
+  //var erroEle = $('.error-message'), focusInput = $('.questions').find('.active');
 
   $('.questions li').click(function() {
     nextMaster('navi');
@@ -21,7 +18,8 @@ $(document).ready(function() {
       marginTop: '-150px',
       opacity: 0
     }, 200)
-    //                     .AddClass('done');
+
+    //.AddClass('done');
 
     thisInput.closest('li').nextAll('li').animate({
       marginTop: '150px',
@@ -35,20 +33,6 @@ $(document).ready(function() {
   if (focusInput.val() != '') {
     $('#next-page').css('opacity', 1);
   }
-
-  $(document).keypress(function(event) {
-    if (event.which == 13) {
-      nextMaster('keypress');
-      event.preventDefault();
-    }
-
-    $('#next-page').click(function() {
-      var focusInput = $('.questions').find('.active');
-      nextMaster('nextpage');
-
-    })
-
-  });
 
   function nextMaster(type) {
     var focusInput = $('.questions').find('.active');
@@ -85,33 +69,7 @@ $(document).ready(function() {
       $('#next-page').css('opacity', 0);
     }
   });
-
-  $("#password").keyup(function(event) {
-    var focusInput = $(this);
-    if (focusInput.val().length > 1) {
-      $('#next-page').css('opacity', 1);
-    }
-  });
-
-  $('#signup').click(function() {
-    $('.navigation').fadeOut(400).css({
-      'display': 'none'
-    });
-    $('#sign-form').fadeOut(400).css({
-      'display': 'none'
-    });
-    $(this).fadeOut(400).css({
-      'display': 'none'
-    });
-    $('#wf').animate({
-      opacity: 1,
-      marginTop: '1em'
-    }, 500).css({
-      'display': 'block'
-    });
-  });
-
-
+}
 
 });
 
@@ -123,14 +81,6 @@ function showLi(focusInput) {
   }, 200);
 
   console.log(focusInput.closest('li'));
-
-  if (focusInput.attr('id') == 'viewpswd') {
-    $("[data-ref='" + focusInput.attr('id') + "']")
-      .addClass('done').html('password');
-    //                    .html(Array(focusInput.val().length+1).join("*"));
-  } else {
-    $("[data-ref='" + focusInput.attr('id') + "']").addClass('done').html(focusInput.val());
-  }
 
   focusInput.removeClass('active');
   counter++;

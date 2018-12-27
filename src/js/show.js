@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
   var baseTot = 0;
   var total = parseInt($('#total').text());
-  $("#showFrames").toggle("fast");
+
   $("")
   // Summary Updates
   $(function() {
@@ -39,13 +39,19 @@ jQuery(document).ready(function() {
   });
 
 
-  /*Nav bar */
+  /*Show option's inner content*/
   var showLStyle = $("#showLStyle");
   var fType = $("#fType");
   var lStyle = $("#lStyle");
   var steps = $(".step");
   var form = $('#sign-form');
 
+  $('.questions li .toggle-btn').click(function() {
+    /*------ toggles display field for ol tag on select ------*/
+    $(this).parent().find('ol').toggle("fast");
+
+  });
+/*
   fType.click(function() {
     $("#showFrames").toggle("fast");
   });
@@ -58,11 +64,11 @@ jQuery(document).ready(function() {
   $("#lAddOn").click(function() {
     $("#showLAddOn").toggle("fast");
   });
-
+*/
 
   // Moves progress bar to next
   lStyle.bind("click", function() {
-    showLStyle.toggle("fast");
+
     jQuery.each(steps, function(i) {
       if (!$(steps[i]).hasClass('current') && !$(steps[i]).hasClass('done')) {
         $(steps[i]).addClass('current');
