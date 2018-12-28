@@ -1,40 +1,62 @@
 jQuery(document).ready(function() {
-  var baseTot = 0;
-  var total = parseInt($('#total').text());
+  var framePrice = 0;
+  var lenStylePrice = 0;
+  var progressivePrice = 0;
+  var lensMaterialPrice = 0;
+  var lensAddOnPrice = 0;
+  var counter = 1;
 
-  $("")
-  // Summary Updates
   $(function() {
+
     $('.lensImg li .optionContainer').on('click', function() {
-      $(this).parent().addClass('lensImgSelect').siblings().removeClass('lensImgSelect');
-      var data = $('.lensImgSelect .picText').text();
-      var total = parseInt($('#total').text());
-      var price = $(".lensImgSelect .optionPrice");
-      $(".frameData").text(data);
+      if (!$(this).parent().hasClass('lensImgSelect')) {
 
-/*
-      if(!price.length){
-        if($(this).parent().hasClass('.addedPrice')){
-          price = $(this).parent().hasClass('optionPrice addedPrice').text().replace(/\D/g, '');
-          total = total + (price * -1);
-          console.log(total);
-        }
-      }
-*/
-      if (!price.hasClass('addedPrice') && price.length) {
-        price.addClass('addedPrice');
+        /*       One option is selected / all other options are unselected           */
+        $(this).parent().addClass('lensImgSelect').siblings().removeClass('lensImgSelect');
 
-        price = price.text().replace(/\D/g, '');
+        /*       Declaring Variables to calcuate data               */
+        var data = $('.lensImgSelect .picText').text();
+        var price = $(".lensImgSelect .optionPrice");
+        /* Read in id tag name*/
+        var option = $(this).parent().parent().attr('id');
 
-        if (!price) {
+        /* debugging */
+        //console.log("%s is data.\n %s is price", data, price.text());
+
+        if (price.length) {
+          price = price.text().replace(/\D/g, '');
+        } else {
           price = 0;
         }
-        var total2 = total + parseInt(price);
-        console.log(price + " " + total);
 
-        $("#total").text(total2);
+        /*  Will turn to function to reduce redundancy */
+        if (option == 'showFrames') {
+          framePrice = parseInt(price);
+          $(".frameData").text(data);
+          $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+        } else if (option == 'showLStyle') {
+          lenStylePrice = parseInt(price);
+          $(".lensData").text(data);
+          $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+        } else if (option == 'showPLT') {
+          progressivePrice = parseInt(price);
+          $(".progData").text(data);
+          $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+        } else if (option == 'showLMaterial') {
+          lensMaterialPrice = parseInt(price);
+          $(".materialData").text(data);
+          $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+        } else if (option == 'showLAddOn') {
+          lensAddOnPrice = parseInt(price);
+          $(".addOnData").text(data);
+          $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+        }
+
+        updatePrice();
+
+
+        $(this).parent().removeClass('lensImgSelect');
       }
-
     });
   });
 
@@ -50,21 +72,28 @@ jQuery(document).ready(function() {
     /*------ toggles display field for ol tag on select ------*/
     $(this).parent().find('ol').toggle("fast");
 
+
   });
-/*
-  fType.click(function() {
-    $("#showFrames").toggle("fast");
-  });
-  $("#progLTech").click(function() {
-    $("#showPLT").toggle("fast");
-  });
-  $("#lMaterial").click(function() {
-    $("#showLMaterial").toggle("fast");
-  });
-  $("#lAddOn").click(function() {
-    $("#showLAddOn").toggle("fast");
-  });
-*/
+
+  function updatePrice() {
+    var total = framePrice + lenStylePrice + progressivePrice + lensMaterialPrice + lensAddOnPrice;
+    //    console.log(total);
+    $("#total").text(total);
+  }
+  /*
+    fType.click(function() {
+      $("#showFrames").toggle("fast");
+    });
+    $("#progLTech").click(function() {
+      $("#showPLT").toggle("fast");
+    });
+    $("#lMaterial").click(function() {
+      $("#showLMaterial").toggle("fast");
+    });
+    $("#lAddOn").click(function() {
+      $("#showLAddOn").toggle("fast");
+    });
+  */
 
   // Moves progress bar to next
   lStyle.bind("click", function() {

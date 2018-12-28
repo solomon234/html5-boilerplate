@@ -29,7 +29,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/show.js"></script>
-  <script src="js/main.js"></script>
+
   <br />
   <!--<div class="status"></div>
 
@@ -40,11 +40,9 @@
 -->
   <div class="container">
     <section>
-
       <div class="arrow-steps clearfix">
         <div class="step current"> </div>
-
-      <!-- https://www.jqueryscript.net/demo/Step-Progress-Bar-jQuery-Stepbar/
+        <!-- https://www.jqueryscript.net/demo/Step-Progress-Bar-jQuery-Stepbar/
       implementing similar design
       <div class="step"> </div>
         <div class="step">  </div>
@@ -55,20 +53,18 @@
       <aside>
         <div class="aside-container">
           <h4 style="border-bottom:1px solid black;">Summary</h4>
-          <p>Frame Type: <span class="asideData frameData">Test</span> </p>
+          <p>Frame Type: <span class="asideData frameData"></span> </p>
           <p>Lens Style: <span class="asideData lensData"></span></p>
           <p>Progressive Lens Tech: <span class="asideData progData"></span></p>
           <p>Lens Material: <span class="asideData materialData"></span></p>
           <p>Lens Add-ons: <span class="asideData addOnData"></span></p>
-
-          <h3>Total: $<span id="total">0</span></h3>
-
+          <h3>Total: $<span id="total"></span></h3>
         </div>
       </aside>
       <div class="sign-form">
         <ul class="questions">
           <li>
-            <div class="toggle-btn" type="hidden" id="fType" data-ref="frame">Frame Type</div>
+            <div class="toggle-btn" type="hidden" id="fType">Frame Type</div>
             <ol class="lensImg" style="display:block;" id="showFrames">
               <li>
                 <div class="optionContainer">

@@ -392,22 +392,6 @@ body {
   /* border: solid #fb9494 2px; */
 }
 
-.container .sign-form #next-page {
-  opacity: 0;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 20px;
-  background: url("https://jdniki.github.io/signup/images/next-page.svg");
-  background-size: contain;
-}
-
-.container .sign-form #next-page:hover {
-  background: url("https://jdniki.github.io/signup/images/next-pagehover.svg");
-  background-size: contain;
-}
-
 .container .sign-form .questions {
   list-style: none;
   -webkit-transition: height 0.4s;
@@ -415,6 +399,14 @@ body {
   width: 60.5vw;
   /* display: inline-block; */
   height: 87vh;
+}
+
+/* working css
+.container .sign-form .questions > li:nth-of-type(n+2) {
+  display: none;
+}*/
+.container .sign-form .questions > li:not(:nth-child(1)){
+    display: none;
 }
 
 .container .sign-form .questions li span {
