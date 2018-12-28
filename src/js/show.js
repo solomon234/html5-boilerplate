@@ -1,10 +1,13 @@
 jQuery(document).ready(function() {
+  // Inspiration - https://codepen.io/jdniki/pen/rewxPo
   var framePrice = 0;
   var lenStylePrice = 0;
   var progressivePrice = 0;
   var lensMaterialPrice = 0;
   var lensAddOnPrice = 0;
   var counter = 1;
+  var steps = $(".step");
+  var form = $('#sign-form');
 
   $(function() {
 
@@ -34,22 +37,26 @@ jQuery(document).ready(function() {
           framePrice = parseInt(price);
           $(".frameData").text(data);
           $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+          steps = steps.nextAll(':first').addClass('current');
         } else if (option == 'showLStyle') {
           lenStylePrice = parseInt(price);
           $(".lensData").text(data);
           $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
-        } else if (option == 'showPLT') {
+          steps = steps.nextAll(':first').addClass('current');        } else if (option == 'showPLT') {
           progressivePrice = parseInt(price);
           $(".progData").text(data);
           $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+          steps = steps.nextAll(':first').addClass('current');
         } else if (option == 'showLMaterial') {
           lensMaterialPrice = parseInt(price);
           $(".materialData").text(data);
           $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+          steps = steps.nextAll(':first').addClass('current');
         } else if (option == 'showLAddOn') {
           lensAddOnPrice = parseInt(price);
           $(".addOnData").text(data);
           $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+          steps = steps.nextAll(':first').addClass('current');
         }
 
         updatePrice();
@@ -62,16 +69,11 @@ jQuery(document).ready(function() {
 
 
   /*Show option's inner content*/
-  var showLStyle = $("#showLStyle");
-  var fType = $("#fType");
-  var lStyle = $("#lStyle");
-  var steps = $(".step");
-  var form = $('#sign-form');
+
 
   $('.questions li .toggle-btn').click(function() {
     /*------ toggles display field for ol tag on select ------*/
     $(this).parent().find('ol').toggle("fast");
-
 
   });
 
@@ -80,33 +82,18 @@ jQuery(document).ready(function() {
     //    console.log(total);
     $("#total").text(total);
   }
-  /*
-    fType.click(function() {
-      $("#showFrames").toggle("fast");
-    });
-    $("#progLTech").click(function() {
-      $("#showPLT").toggle("fast");
-    });
-    $("#lMaterial").click(function() {
-      $("#showLMaterial").toggle("fast");
-    });
-    $("#lAddOn").click(function() {
-      $("#showLAddOn").toggle("fast");
-    });
-  */
+
 
   // Moves progress bar to next
-  lStyle.bind("click", function() {
-
-    jQuery.each(steps, function(i) {
-      if (!$(steps[i]).hasClass('current') && !$(steps[i]).hasClass('done')) {
-        $(steps[i]).addClass('current');
-        $(steps[i - 1]).removeClass('current').addClass('done');
-        return false;
-      }
-
-    })
-  });
+    //
+    // jQuery.each(steps, function(i) {
+    //   if (!$(steps[i]).hasClass('current') && !$(steps[i]).hasClass('done')) {
+    //     $(steps[i]).addClass('current');
+    //     $(steps[i - 1]).removeClass('current').addClass('done');
+    //     return false;
+    //   }
+    //
+    // })
   /* may need for loop to reset addclass
 
   fType.bind("click", function() {

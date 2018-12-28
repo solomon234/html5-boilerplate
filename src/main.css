@@ -95,9 +95,9 @@
   cursor: default;
   /* margin: 0 3px; */
   /* padding: 10px 6px 11px 7px; */
-  width: 1%;
-  height: 30px;
-  /* float: left; */
+  width: 20%;
+  /* height: 30px; */
+  float: left;
   /* position: relative; */
   background-color: powderblue;
   -webkit-user-select: none;
@@ -106,59 +106,15 @@
   user-select: none;
   transition: background-color 0.2s ease;
   /* border: solid 2px; */
+  display:none;
 }
 
-/*
-.arrow-steps .step:after,
-.arrow-steps .step:before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: -17px;
-  width: 0;
-  height: 0;
-  border-top: 19px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-left: 17px solid #d9e3f7;
-  z-index: 2;
-  transition: border-color 0.2s ease;
-}
-*/
-.arrow-steps .step:before {
-  right: auto;
-  left: 0;
-  border-left: 17px solid #BFDBF7;
-  z-index: 0;
-}
-
-.arrow-steps .step:first-child:before {
-  border: none;
-}
 
 .arrow-steps .step:first-child {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-.arrow-steps .step span {
-  position: relative;
-}
-
-.arrow-steps .step span:before {
-  opacity: 0;
-  content: "✔";
-  position: absolute;
-  top: -2px;
-  left: -20px;
-}
-
-.arrow-steps .step.done span:before {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease 0.5s;
-  -moz-transition: opacity 0.3s ease 0.5s;
-  -ms-transition: opacity 0.3s ease 0.5s;
-  transition: opacity 0.3s ease 0.5s;
-}
 
 .arrow-steps .step.done {
   opacity: .5;
@@ -166,12 +122,10 @@
 
 .arrow-steps .step.current {
   color: #fff;
+  display: block;
   background-color: #23468c;
 }
 
-.arrow-steps .step.current:after {
-  border-left: 17px solid #23468c;
-}
 
 /* ID's will be individually diaplying none*/
 #showLStyle, #showFrames, #showPLT, #showLAddOn, #showLMaterial {
@@ -405,8 +359,8 @@ body {
 .container .sign-form .questions > li:nth-of-type(n+2) {
   display: none;
 }*/
-.container .sign-form .questions > li:not(:nth-child(1)){
-    display: none;
+.container .sign-form .questions>li:not(:nth-child(1)) {
+  display: none;
 }
 
 .container .sign-form .questions li span {
