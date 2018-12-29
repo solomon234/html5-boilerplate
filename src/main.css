@@ -82,7 +82,6 @@
 .arrow-steps {
   border: 1px lightblue solid;
   width: 90%;
-  /* height: 34px; */
   border-radius: 5px;
   padding: 0;
   margin-left: 53px;
@@ -90,68 +89,44 @@
 
 .arrow-steps .step {
   font-size: .3em;
-  /* text-align: center; */
-  /* color: #666; */
   cursor: default;
-  /* margin: 0 3px; */
-  /* padding: 10px 6px 11px 7px; */
-  width: 20%;
-  /* height: 30px; */
   float: left;
-  /* position: relative; */
-  background-color: powderblue;
+  color:white;
+  background-color: white;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transition: background-color 0.2s ease;
-  /* border: solid 2px; */
-  display:none;
 }
 
-
-.arrow-steps .step:first-child {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-
-.arrow-steps .step.done {
-  opacity: .5;
-}
 
 .arrow-steps .step.current {
   color: #fff;
   display: block;
+  width: 20%;
   background-color: #23468c;
-}
+  animation-name: progressBar;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  }
 
+  @keyframes progressBar {
+    0% {
+      width: 0%;
+      color:#fff0;
+      white-space: nowrap;
+    }
 
+    100% {
+      font-size: .3em;
+      width: 20%;
+    }
+  }
 /* ID's will be individually diaplying none*/
 #showLStyle, #showFrames, #showPLT, #showLAddOn, #showLMaterial {
   display: none;
 }
 
-/* David 11/13/18 edit p-tag*/
-/* Solomon: Shortened the code a little to avoid redunancy*/
-/*
-#fullRimImg:hover~.picText {
-  font-size: 30%;
-  transition-duration: .2s;
-}
-
-#semiRimImg:hover~.picText {
-  font-size: 30%;
-  transition-duration: .2s;
-}
-
-#RimlessImg:hover~.picText {
-  font-size: 30%;
-  transition-duration: .2s;
-}
-*/
-/*David 11/13/18*/
-/* David 11/13/18 edit p-tag*/
 /* Aside summary container*/
 .total-price {
   text-align: right;

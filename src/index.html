@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">-->
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 
 <body>
@@ -42,7 +43,6 @@
     <section>
       <div class="arrow-steps clearfix">
         <div class="step current">Frame Type</div>
-        <!-- https://www.jqueryscript.net/demo/Step-Progress-Bar-jQuery-Stepbar/ -->
         <div class="step" > Lens Style </div>
         <div class="step" > Progressive </div>
         <div class="step" > Lens Material </div>
@@ -50,7 +50,7 @@
       </div>
 
       <aside>
-        <div class="aside-container">
+        <div class="aside-container animated pulse">
           <h4 style="border-bottom:1px solid black;">Summary</h4>
           <p>Frame Type: <span class="asideData frameData"></span> </p>
           <p>Lens Style: <span class="asideData lensData"></span></p>
@@ -63,7 +63,7 @@
       <div class="sign-form">
         <ul class="questions">
           <li>
-            <div class="toggle-btn" type="hidden" id="fType">Frame Type</div>
+            <div class="toggle-btn animated lightSpeedIn" type="hidden" id="fType">Frame Type</div>
             <ol class="lensImg" style="display:block;" id="showFrames">
               <li>
                 <div class="optionContainer">
@@ -94,7 +94,7 @@
             </ol>
           </li>
           <li>
-            <div class="toggle-btn" id="lStyle">Lens Style</div>
+            <div class="toggle-btn animated lightSpeedIn" id="lStyle">Lens Style</div>
             <ol class="lensImg" id="showLStyle">
               <li>
                 <div class="optionContainer">
@@ -126,7 +126,7 @@
             </ol>
           </li>
           <li>
-            <div class="toggle-btn" id="progLTech">Progressive Lens Technology</div>
+            <div class="toggle-btn animated lightSpeedIn" id="progLTech">Progressive Lens Technology</div>
             <ol class="lensImg" id="showPLT">
               <li>
                 <div id="RimlessImg" class="optionContainer">
@@ -157,7 +157,7 @@
             </ol>
           </li>
           <li>
-            <div class="toggle-btn" id="lMaterial">Lens Material</div>
+            <div class="toggle-btn animated lightSpeedIn" id="lMaterial">Lens Material</div>
             <ol class="lensImg" id="showLMaterial">
               <li>
                 <div class="optionContainer">
@@ -188,7 +188,7 @@
             </ol>
           </li>
           <li>
-            <div class="toggle-btn" id="lAddOn">Lens Add-ons</div>
+            <div class="toggle-btn animated lightSpeedIn" id="lAddOn">Lens Add-ons</div>
             <ol class="lensImg" id="showLAddOn">
               <li>
                 <div class="optionContainer">
