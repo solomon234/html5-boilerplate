@@ -12,59 +12,66 @@ jQuery(document).ready(function() {
   $(function() {
 
     $('.lensImg li .optionContainer').on('click', function() {
-      if (!$(this).parent().hasClass('lensImgSelect')) {
+    //  if (!$(this).parent().hasClass('lensImgSelect')) {
         /* Read in id tag name*/
-        var option = $(this).parent().parent().attr('id');
+        var option = $(this).closest("ol").prop("id");
 
         /*       One option is selected / all other options are unselected           */
         if (option != 'showLAddOn') {
-          $(this).parent().addClass('lensImgSelect').siblings().removeClass('lensImgSelect');
+          $(this).closest('li').addClass('lensImgSelect').siblings().removeClass('lensImgSelect');
         } else {
-          $(this).parent().addClass('lensImgSelect');
+          $(this).parent().toggleClass('lensImgSelect');
+
         }
         /*       Declaring Variables to calcuate data               */
 
-        var data = $('.lensImgSelect .picText').text();
-        var price = $(".lensImgSelect .optionPrice");
-
-
+        var data = $(this).find('.picText').text();
+        var price = $(this).find('.optionPrice');
 
         /* price convert */
-        if (price.length) {
+        if (price.length && option != 'showLAddOn') {
           price = price.text().replace(/\D/g, '');
-        } else {
+        } else if (option == 'showLAddOn') {
+          data = $(this).parent().find('.picText').text();
+          price = $(this).parent().find('.optionPrice');
+          price = price.text().replace(/\D/g, '');
+
+        }
+        else {
           price = 0;
         }
+
+
 
         /*  Will turn to function to reduce redundancy */
         if (option == 'showFrames') {
           framePrice = parseInt(price);
           $(".frameData").text(data);
-          $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+          $('#' + option).toggle('fast').parent().next('li').toggle('fast').find('ol').toggle('fast');
           steps.after("<div class='step current' > Lens Style </div>");
           steps = steps.nextAll(':first');
         } else if (option == 'showLStyle') {
           lenStylePrice = parseInt(price);
           $(".lensData").text(data);
           if (data == "Progressive") {
-            $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+            $('#' + option).toggle('fast').parent().next('li').toggle('fast').find('ol').toggle('fast');
             steps.after("<div class='step current' > Progressive </div>");
             steps = steps.nextAll(':first');
           } else {
-            $('#' + option).toggle().parent().next('li').next('li').toggle().find('ol').toggle('fast');
+            $('#' + option).toggle('fast').parent().next('li').next('li').toggle('fast').find('ol').toggle('fast');
             steps.after("<div class='step current' > Lens Material </div>");
             steps = steps.nextAll(':first');
           }
         } else if (option == 'showPLT') {
           progressivePrice = parseInt(price);
           $(".progData").text(data);
-          $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+          $('#' + option).toggle('fast').parent().next('li').toggle('fast').find('ol').toggle('fast');
           steps.after("<div class='step current' > Lens Material </div>");
           steps = steps.nextAll(':first');
         } else if (option == 'showLMaterial') {
           lensMaterialPrice = parseInt(price);
           $(".materialData").text(data);
-          $('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
+          $('#' + option).toggle('fast').parent().next('li').toggle('fast').find('ol').toggle('fast');
           steps.after("<div class='step current' > Add-On </div>");
           steps = steps.nextAll(':first');
         } else if (option == 'showLAddOn') {
@@ -73,13 +80,14 @@ jQuery(document).ready(function() {
           $(".addOnData").text(data);
           //$('#' + option).toggle().parent().next('li').toggle().find('ol').toggle('fast');
           steps = steps.nextAll(':first').addClass('current');
+
         }
 
         updatePrice();
 
 
-        $(this).parent().removeClass('lensImgSelect');
-      }
+
+//      }
     });
   });
 
