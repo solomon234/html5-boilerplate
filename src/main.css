@@ -80,10 +80,6 @@
 }
 
 .arrow-steps {
-  border: 1px lightblue solid;
-  width: 90%;
-  border-radius: 5px;
-  padding: 0;
   margin-left: 53px;
 }
 
@@ -91,38 +87,13 @@
   font-size: .3em;
   cursor: default;
   float: left;
-  color: white;
-  background-color: white;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .arrow-steps .step.current {
-  color: #fff;
   display: block;
-  width: 20%;
-  background-color: #23468c;
-  animation-name: progressBar;
-  animation-iteration-count: 1;
-  animation-duration: 1s;
+  width: 12%;
 }
 
-@keyframes progressBar {
-  0% {
-    width: 0%;
-    color: #fff0;
-    white-space: nowrap;
-  }
-
-  50% {}
-
-  100% {
-    font-size: .3em;
-    width: 20%;
-  }
-}
 
 /* ID's will be individually diaplying none*/
 #showLStyle, #showFrames, #showPLT, #showLAddOn, #showLMaterial {
@@ -188,15 +159,17 @@ aside .aside-container {
   padding: 4px 0;
   border-radius: 3px;
   font-family: 'Montserrat', sans-serif;
-  right:10%;
+  right: 10%;
 }
 
 .confirmBtn p {
   text-align: center;
   text-transform: uppercase;
   color: #FFF;
+  cursor: pointer;
 }
-.confirmBtn:hover{
+
+.confirmBtn:hover {
   background-color: red;
 }
 
@@ -394,33 +367,64 @@ body {
   aside {
     postion: relative;
     position: unset;
-    width: 100%;
+    width: 10vw;
+  }
+
+  aside p {
+    font-size: .6em;
   }
 
   aside .aside-container {
+    margin-left: -25%;
     position: unset;
-    width: 100%;
+    width: 93vw;
     font-size: 5vw;
+  }
+
+  .asideData {
+    font-size: 2.3vw;
+  }
+
+  .container {
+    width: 95vw;
   }
 
   .container .sign-form .questions {
     width: 90vw;
+    margin-left: -25px;
   }
 
   .lensImg {
     width: 100%;
   }
 
+  .optionPrice {
+    right: 10%;
+  }
+
+  .optionContainer img {
+    width: 28%;
+  }
+
+  .botLine {
+    width: 70%;
+  }
+
   .optionContainer {
-    font-size: 2em;
+    font-size: 2.5em;
+    height: 12vh;
+    width: 78vw;
+    margin-left: -20px;
   }
 
   .txtDesc {
-    font-size: .6em;
+    font-size: .3em;
+    width: 70%;
+    left:26%;
   }
 
   .toggle-btn {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   ::-webkit-input-placeholder {

@@ -41,20 +41,18 @@
 -->
   <div class="container">
     <section>
-      <div class="arrow-steps clearfix">
-        <div class="step current">Frame Type</div>
-        <!--<div class="step" > Lens Style </div>
-        <div class="step" > Progressive </div>
-        <div class="step" > Lens Material </div>
-        <div class="step" > Add-On </div>-->
+      <!--
+       <div class="arrow-steps clearfix">
+        <div class="step"></div>
       </div>
+    -->
 
       <aside>
         <div class="aside-container animated pulse">
-          <h4 >Summary</h4>
+          <h4>Summary</h4>
           <p>Frame Type: <span class="asideData frameData"></span> </p>
           <p>Lens Style: <span class="asideData lensData"></span></p>
-          <p>Progressive Lens Tech: <span class="asideData progData"></span></p>
+          <p style="display:none;">Progressive Lens Tech: <span class="asideData progData"></span></p>
           <p>Lens Material: <span class="asideData materialData"></span></p>
           <p>Lens Add-ons: <span class="asideData addOnData"></span></p>
           <h3>Total: $<span id="total"></span></h3>
@@ -65,7 +63,7 @@
       </aside>
       <div class="sign-form">
         <ul class="questions">
-          <li>
+          <li class="frameTypeLI">
             <div class="toggle-btn animated lightSpeedIn" type="hidden" id="fType">Frame Type</div>
             <ol class="lensImg" style="display:block;" id="showFrames">
               <li>
@@ -96,7 +94,7 @@
               </li>
             </ol>
           </li>
-          <li>
+          <li class="lensStyleLI">
             <div class="toggle-btn animated lightSpeedIn" id="lStyle">Lens Style</div>
             <ol class="lensImg" id="showLStyle">
               <li>
@@ -128,7 +126,7 @@
               </li>
             </ol>
           </li>
-          <li>
+          <li class ="progLI">
             <div class="toggle-btn animated lightSpeedIn" id="progLTech">Progressive Lens Technology</div>
             <ol class="lensImg" id="showPLT">
               <li>
@@ -159,7 +157,7 @@
               </li>
             </ol>
           </li>
-          <li>
+          <li class = "lensMatLI">
             <div class="toggle-btn animated lightSpeedIn" id="lMaterial">Lens Material</div>
             <ol class="lensImg" id="showLMaterial">
               <li>
@@ -190,7 +188,7 @@
               </li>
             </ol>
           </li>
-          <li>
+          <li class = "lensAddLI">
             <div class="toggle-btn animated lightSpeedIn" id="lAddOn">Lens Add-ons</div>
             <ol class="lensImg" id="showLAddOn">
               <li>
