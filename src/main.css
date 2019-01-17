@@ -1,99 +1,26 @@
-/*heading image*/
-/* test */
-.status {
+* {
+  margin: 0;
   padding: 10px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: black;
-  color: white;
-  z-index: 900;
 }
 
-.heading-image {
-  background: #CC95C0;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 20vh;
-  width: 100%;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  background-position: center;
+/*David changed padding to 10px */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.lens-heading {
-  padding: 2px 1px 3px 45px;
-  text-align: left;
-  font-size: .45em;
-}
-
-/*tool tip for each step*/
-.tooltip {
-  position: relative;
-  display: inline-block;
-  float: right;
-}
-
-.tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
+  background-color: white;
+  /*  color: #fff;*/
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
   text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-  opacity: 0;
-  transition: opacity 1s;
+  font-size: 3.0vw !important;
+  font-weight: bold;
 }
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-/* nav progress bar */
-.clearfix:after {
-  clear: both;
-  content: "";
-  display: block;
-  height: 0;
-}
-
-.nav {
-  margin-top: 40px;
-}
-
-.pull-right {
-  float: right;
-}
-
-.arrow-steps {
-  margin-left: 53px;
-}
-
-.arrow-steps .step {
-  font-size: .3em;
-  cursor: default;
-  float: left;
-}
-
-.arrow-steps .step.current {
-  display: block;
-  width: 12%;
-}
-
 
 /* ID's will be individually diaplying none*/
 #showLStyle, #showFrames, #showPLT, #showLAddOn, #showLMaterial {
@@ -111,44 +38,36 @@
   right: 25%;
 }
 
-aside h4 {
+.aside-container h4 {
   background-color: lightgray;
   border-top-right-radius: 15px;
   text-align: left;
   font-size: .75em;
 }
 
-aside h3 {
+.aside-container h3 {
   text-align: left;
   font-size: .75em;
 }
 
-aside p {
+.aside-container p {
   font-size: .3em;
   text-align: left;
   margin-top: .3em;
 }
 
-aside {
-  width: 25%;
-  z-index: -1;
-  border-radius: 10px;
-  position: absolute;
-  right: 9%;
-  top: 20%;
-}
-
-aside .aside-container {
+.aside-container {
   font-family: 'Montserrat', sans-serif;
   width: 28vw;
-  right: 2%;
+  right: 5%;
+  top: 20%;
   margin: 8px 10px;
   border-style: outset;
   border-color: rgba(255, 0, 0, 0.4);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: #e9e1e14d;
-  position: relative;
+  position: absolute;
   height: 50vh;
 }
 
@@ -167,10 +86,12 @@ aside .aside-container {
   text-transform: uppercase;
   color: #FFF;
   cursor: pointer;
+
 }
 
 .confirmBtn:hover {
   background-color: red;
+    transition: background-color 500ms;
 }
 
 .container .sign-form .questions ol li {
@@ -189,40 +110,7 @@ aside .aside-container {
   text-align: left;
   margin-top: 15px;
   font-family: 'Montserrat', sans-serif;
-  width: 35%;
-}
-
-/*
-.toggle-btn:hover {
-  border-bottom-color: green;
-  transform: translate(50px, 0px);
-  width: 70%;
-  transform: translateX(70px);
-  transition: all 3s;
-  transition: all 3s;
-}
-*/
-* {
-  margin: 0;
-  padding: 10px;
-}
-
-/*David changed padding to 10px */
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-
-body {
-  background-repeat: no-repeat;
-  background-color: white;
-  /*  color: #fff;*/
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
-  text-align: center;
-  font-size: 3.0vw !important;
-  font-weight: bold;
+  width: 100%;
 }
 
 .optionContainer {
@@ -231,6 +119,10 @@ body {
   padding: 10px 5px;
   height: 15vh;
   position: relative;
+}
+
+.optionContainer:hover{
+  border: 2px lightgray ridge;
 }
 
 .txtDesc {
@@ -364,20 +256,19 @@ body {
 }
 
 @media screen and (max-device-width: 1024px) {
-  aside {
-    postion: relative;
+  .aside-container {
+
     position: unset;
     width: 10vw;
   }
 
-  aside p {
+  .aside-container p {
     font-size: .6em;
   }
 
-  aside .aside-container {
-    margin-left: -25%;
+   .aside-container {
     position: unset;
-    width: 93vw;
+    width: 83vw;
     font-size: 5vw;
   }
 
@@ -413,8 +304,8 @@ body {
   .optionContainer {
     font-size: 2.5em;
     height: 12vh;
-    width: 78vw;
-    margin-left: -20px;
+    width: 70vw;
+
   }
 
   .txtDesc {
@@ -426,6 +317,7 @@ body {
   .toggle-btn {
     font-size: 1.3em;
   }
+
 
   ::-webkit-input-placeholder {
     font-size: 0.9em;
