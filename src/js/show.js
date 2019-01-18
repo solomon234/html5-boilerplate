@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
       // Inspiration - https://codepen.io/jdniki/pen/rewxPo
+      var rxOption = false;
       var framePrice = 0;
       var lenStylePrice = 0;
       var progressivePrice = 0;
@@ -9,6 +10,7 @@ jQuery(document).ready(function() {
       var steps = $(".step");
       var form = $('#sign-form');
       var lensAddOns = new Object();
+
 
       $(function() {
 
