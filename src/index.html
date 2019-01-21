@@ -31,21 +31,26 @@
   <script src="js/plugins.js"></script>
   <script src="js/show.js"></script>
 
-  <div id="promptContainer">
+
   <div id="promptDialog">
     <div class="promptQuestions">
-    <h4>Do you need Prescripton Lenses?</h4>
-    <button>Yes</button>
-    <button>No</button>
+      <h4>Do you need Prescription Lenses?</h4>
+      <div class="questionContainer">
+      <div class="confirmBtn"><p>Yes</p></div>
+      <div class="confirmBtn"><p>No</p></div>
+    </div>
+    </div>
+    <div class="promptQuestions">
+      <h4>Do you have a Prescription?</h4>
+      <div class="questionContainer">
+      <div class="confirmBtn"><p>Yes</p></div>
+      <div class="confirmBtn"><p>No</p></div>
+    </div>
+    </div>
   </div>
-  <div class="promptQuestions">
-    <h4>Do you have a Prescription?</h4>
-    <button>Yes</button>
-    <button>No</button>
-  </div>
-  </div>
-  <div class="container">
-    <section>
+  <div id="blurContainer">
+    <div class="container">
+      <section>
         <div class="aside-container animated pulse">
           <h4>Summary</h4>
           <p>Frame Type: <span class="asideData frameData"></span> </p>
@@ -59,178 +64,179 @@
           </div>
         </div>
 
-      <div class="sign-form">
-        <ul class="questions">
-          <li class="frameTypeLI">
-            <div class="toggle-btn animated lightSpeedIn" type="hidden" id="fType">Frame Type</div>
-            <ol class="lensImg" style="display:block;" id="showFrames">
-              <li>
-                <div class="optionContainer">
-                  <img id="fullRimImg" src="img/fullframe2.jpg"> <!-- David 11/13/18 Added ID to img-->
-                  <div class="picText"> Full-Rimmed Frame </div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span>
-                  <!-- David 11/13/18 Added new text-->
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img id="semiRimImg" src="img/semirim.jpg">
-                  <div class="picText"> Semi-Rimless Frame </div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img id="RimlessImg" src="img/rimless.jpg">
-                  <div class="picText"> Rimless Frame </div>
-                  <div class="optionPrice">$50</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
-                </div>
-              </li>
-            </ol>
-          </li>
-          <li class="lensStyleLI">
-            <div class="toggle-btn animated lightSpeedIn" id="lStyle">Lens Style</div>
-            <ol class="lensImg" id="showLStyle">
-              <li>
-                <div class="optionContainer">
-                  <img id="RimlessImg" src="img/sv.jpg"> <!-- David 11/13/18 Added ID to img-->
-                  <div class="picText">Single Vision</div>
-                  <div class="optionPrice">$50</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Single vision lenses are only distance or reading prescription.</span><!-- David 11/13/18 Added new text-->
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img id="RimlessImg" src="img/bf.jpg">
-                  <div class="picText">Bifocal</div>
-                  <div class="optionPrice">$75</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">There are 2 different presciptions in a bifocal. <br /> The top could be Distance and the window could be reading.</span>
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img id="RimlessImg" src="img/prog.jpg">
-                  <div class="picText">Progressive</div>
-                  <div class="optionPrice">$100</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Distance, Intermediate (Computer), and near all in one.</span>
-                </div>
-              </li>
-            </ol>
-          </li>
-          <li class ="progLI">
-            <div class="toggle-btn animated lightSpeedIn" id="progLTech">Progressive Lens Technology</div>
-            <ol class="lensImg" id="showPLT">
-              <li>
-                <div id="RimlessImg" class="optionContainer">
-                  <img src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-                  <div class="picText"> Conventional HD Progressive </div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span> <!-- David 11/13/18 Added new text-->
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img src="img/lens-sv.png">
-                  <div class="picText"> Digital HD Progressive </div>
-                  <div class="optionPrice">$50</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img src="img/lens-sv.png">
-                  <div class="picText"> Dual-Digital Progressive </div>
-                  <div class="optionPrice">$100</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
-                </div>
-              </li>
-            </ol>
-          </li>
-          <li class = "lensMatLI">
-            <div class="toggle-btn animated lightSpeedIn" id="lMaterial">Lens Material</div>
-            <ol class="lensImg" id="showLMaterial">
-              <li>
-                <div class="optionContainer">
-                  <img id="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-                  <div class="picText"> Plastic </div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span> <!-- David 11/13/18 Added new text-->
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img id="semiRimImg" src="img/lens-sv.png">
-                  <div class="picText"> Polycarbonate </div>
-                  <div class="optionPrice">$50</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Thinner lighter lens typically for prescriptions that are greater than -/+ 3.</span>
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img id="RimlessImg" src="img/lens-sv.png">
-                  <div class="picText"> Hi-index 1.67 </div>
-                  <div class="optionPrice">$85</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Thinner and lighter lens that is typically for prescriptions greater than -/+ 6.</span>
-                </div>
-              </li>
-            </ol>
-          </li>
-          <li class = "lensAddLI">
-            <div class="toggle-btn animated lightSpeedIn" id="lAddOn">Lens Add-ons</div>
-            <ol class="lensImg" id="showLAddOn">
-              <li>
-                <div class="optionContainer">
-                  <img src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
-                  <div class="picText"> Standard Anti Glare </div>
-                  <div class="optionPrice">$45</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Enhances night time driving experience.</span>
-                  </span> <!-- David 11/13/18 Added new text-->
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img src="img/lens-sv.png">
-                  <div class="picText"> Premium Anti Glare </div>
-                  <div class="optionPrice">$75</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">Enhances night time driving experience and much easier to clean.</span>
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img id="RimlessImg" src="img/lens-sv.png">
-                  <div class="picText"> Transitions Brown</div>
-                  <div class="optionPrice">$75</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">UV Sensitive lenses that activate under direct sunlight.</span>
-                </div>
-              </li>
-              <li>
-                <div class="optionContainer">
-                  <img id="RimlessImg" src="img/lens-sv.png">
-                  <div class="picText"> Transitions Gray</div>
-                  <div class="optionPrice">$75</div>
-                  <span class="botLine"></span>
-                  <span class="txtDesc">UV Sensitive lenses that activate under direct sunlight.</span>
-                </div>
-              </li>
-            </ol>
-          </li>
-        </ul>
+        <div class="sign-form">
+          <ul class="questions">
+            <li class="frameTypeLI">
+              <div class="toggle-btn animated lightSpeedIn" type="hidden" id="fType">Frame Type</div>
+              <ol class="lensImg" style="display:block;" id="showFrames">
+                <li>
+                  <div class="optionContainer">
+                    <img id="fullRimImg" src="img/fullframe2.jpg"> <!-- David 11/13/18 Added ID to img-->
+                    <div class="picText"> Full-Rimmed Frame </div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span>
+                    <!-- David 11/13/18 Added new text-->
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img id="semiRimImg" src="img/semirim.jpg">
+                    <div class="picText"> Semi-Rimless Frame </div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img id="RimlessImg" src="img/rimless.jpg">
+                    <div class="picText"> Rimless Frame </div>
+                    <div class="optionPrice">$50</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="lensStyleLI">
+              <div class="toggle-btn animated lightSpeedIn" id="lStyle">Lens Style</div>
+              <ol class="lensImg" id="showLStyle">
+                <li>
+                  <div class="optionContainer">
+                    <img id="RimlessImg" src="img/sv.jpg"> <!-- David 11/13/18 Added ID to img-->
+                    <div class="picText">Single Vision</div>
+                    <div class="optionPrice">$50</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Single vision lenses are only distance or reading prescription.</span><!-- David 11/13/18 Added new text-->
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img id="RimlessImg" src="img/bf.jpg">
+                    <div class="picText">Bifocal</div>
+                    <div class="optionPrice">$75</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">There are 2 different presciptions in a bifocal. <br /> The top could be Distance and the window could be reading.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img id="RimlessImg" src="img/prog.jpg">
+                    <div class="picText">Progressive</div>
+                    <div class="optionPrice">$100</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Distance, Intermediate (Computer), and near all in one.</span>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="progLI">
+              <div class="toggle-btn animated lightSpeedIn" id="progLTech">Progressive Lens Technology</div>
+              <ol class="lensImg" id="showPLT">
+                <li>
+                  <div id="RimlessImg" class="optionContainer">
+                    <img src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
+                    <div class="picText"> Conventional HD Progressive </div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span> <!-- David 11/13/18 Added new text-->
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img src="img/lens-sv.png">
+                    <div class="picText"> Digital HD Progressive </div>
+                    <div class="optionPrice">$50</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Semi-Rimless frame's are typically metal or plastic on the top of the frame.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img src="img/lens-sv.png">
+                    <div class="picText"> Dual-Digital Progressive </div>
+                    <div class="optionPrice">$100</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Rimless frames are 3 piece frames that have no metal or plastic surrounding the lens.</span>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="lensMatLI">
+              <div class="toggle-btn animated lightSpeedIn" id="lMaterial">Lens Material</div>
+              <ol class="lensImg" id="showLMaterial">
+                <li>
+                  <div class="optionContainer">
+                    <img id="fullRimImg" src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
+                    <div class="picText"> Plastic </div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Full-Rim frame's are typically plastic or metal all around.</span> <!-- David 11/13/18 Added new text-->
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img id="semiRimImg" src="img/lens-sv.png">
+                    <div class="picText"> Polycarbonate </div>
+                    <div class="optionPrice">$50</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Thinner lighter lens typically for prescriptions that are greater than -/+ 3.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img id="RimlessImg" src="img/lens-sv.png">
+                    <div class="picText"> Hi-index 1.67 </div>
+                    <div class="optionPrice">$85</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Thinner and lighter lens that is typically for prescriptions greater than -/+ 6.</span>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="lensAddLI">
+              <div class="toggle-btn animated lightSpeedIn" id="lAddOn">Lens Add-ons</div>
+              <ol class="lensImg" id="showLAddOn">
+                <li>
+                  <div class="optionContainer">
+                    <img src="img/lens-sv.png"> <!-- David 11/13/18 Added ID to img-->
+                    <div class="picText"> Standard Anti Glare </div>
+                    <div class="optionPrice">$45</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Enhances night time driving experience.</span>
+                    </span> <!-- David 11/13/18 Added new text-->
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img src="img/lens-sv.png">
+                    <div class="picText"> Premium Anti Glare </div>
+                    <div class="optionPrice">$75</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">Enhances night time driving experience and much easier to clean.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img id="RimlessImg" src="img/lens-sv.png">
+                    <div class="picText"> Transitions Brown</div>
+                    <div class="optionPrice">$75</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">UV Sensitive lenses that activate under direct sunlight.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="optionContainer">
+                    <img id="RimlessImg" src="img/lens-sv.png">
+                    <div class="picText"> Transitions Gray</div>
+                    <div class="optionPrice">$75</div>
+                    <span class="botLine"></span>
+                    <span class="txtDesc">UV Sensitive lenses that activate under direct sunlight.</span>
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </ul>
 
-      </div>
-    </section>
+        </div>
+      </section>
 </body>
+
 </html>

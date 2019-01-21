@@ -21,8 +21,7 @@ body {
   font-size: 3.0vw !important;
   font-weight: bold;
 }
-#promptContainer{
-
+#blurContainer{
   position: absolute;
   top: 0;
   left: 0;
@@ -51,9 +50,26 @@ body {
 -o-filter: blur(0);
 -ms-filter: blur(0);
 filter: blur(0);
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
 }
-.promptQuestions{
+.questionContainer{
+  width:80%;
+  margin-left: 25%;
+}
+.promptQuestions .confirmBtn{
+  position: unset;
+  float:left;
 
+  width: 15%;
+  font-size: .5em;
+  padding: 4px 0;
+  border-radius: 3px;
+  right: unset;
+  margin: 2% 0 0 10%;
+}
+.promptQuestions {
+  height: 28vh;
 }
 /* ID's will be individually diaplying none*/
 #showLStyle, #showFrames, #showPLT, #showLAddOn, #showLMaterial {
