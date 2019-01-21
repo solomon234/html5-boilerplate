@@ -5,7 +5,8 @@ jQuery(document).ready(function() {
       var lenStylePrice = 0;
       var progressivePrice = 0;
       var lensMaterialPrice = 0;
-      var lensAddOnPrice = 0;
+      var lensAddOnARPrice = 0;
+      var lensAddOnTSPrice = 0;
       var counter = 1;
       var steps = $(".step");
       var form = $('#sign-form');
@@ -20,21 +21,17 @@ jQuery(document).ready(function() {
           var option = $(this).closest("ol").prop("id");
 
           /*       One option is selected / all other options are unselected           */
-          if (option != 'showLAddOn') {
             $(this).closest('li').addClass('lensImgSelect').siblings().removeClass('lensImgSelect');
-          } else {
-            $(this).parent().toggleClass('lensImgSelect');
 
-          }
           /*       Declaring Variables to calcuate data               */
 
           var data = $(this).find('.picText').text();
           var price = $(this).find('.optionPrice');
 
           /* price convert */
-          if (price.length && option != 'showLAddOn') {
+          if (price.length ) {
             price = price.text().replace(/\D/g, '');
-          } else if (option == 'showLAddOn') {
+          } else if (price.length && option == 'showLAddOn' ||option == 'showLAddOn1' || option == 'showLAddOn2') {
             data = $(this).parent().find('.picText').text();
             price = $(this).parent().find('.optionPrice');
             price = price.text().replace(/\D/g, '');
@@ -75,11 +72,13 @@ jQuery(document).ready(function() {
             $('#' + option).toggle('fast');
             $('.lensAddLI').show('fast').children().show('fast');
             /*  showLAddOn option */
-          } else if (option == 'showLAddOn') {
+          } else if (option == 'showLAddOn1') {
             // Multiple add-ons selection
-
-            lensAddOnPrice += parseInt(price);
-            $(".addOnData").text(data);
+            lensAddOnARPrice = parseInt(price);
+            $(".addOnData1").text(data);
+          }else if (option == 'showLAddOn2') {
+            lensAddOnTSPrice = parseInt(price);
+            $(".addOnData2").text(data);
           }
 
           /* If i wanna add a  breadcrumb this would help
@@ -100,7 +99,7 @@ jQuery(document).ready(function() {
       });
 
       function updatePrice() {
-        var total = framePrice + lenStylePrice + progressivePrice + lensMaterialPrice + lensAddOnPrice;
+        var total = framePrice + lenStylePrice + progressivePrice + lensMaterialPrice + lensAddOnARPrice + lensAddOnTSPrice;
         //    console.log(total);
         $("#total").text(total);
       }

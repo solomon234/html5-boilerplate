@@ -69,7 +69,7 @@ filter: blur(0);
   margin: 2% 0 0 10%;
 }
 .promptQuestions {
-  height: 28vh;
+  height: 50%;
 }
 /* ID's will be individually diaplying none*/
 #showLStyle, #showFrames, #showPLT, #showLAddOn, #showLMaterial {
@@ -103,6 +103,7 @@ filter: blur(0);
   font-size: .3em;
   text-align: left;
   margin-top: .3em;
+  word-break: break-all;
 }
 
 .aside-container {
