@@ -99,6 +99,9 @@ jQuery(document).ready(function() {
       });
 
       function updatePrice() {
+        if(!lensAddOnARPrice.length){ lensAddOnARPrice = 0;}
+        if(!lensAddOnTSPrice.length){ lensAddOnTSPrice = 0;}
+
         var total = framePrice + lenStylePrice + progressivePrice + lensMaterialPrice + lensAddOnARPrice + lensAddOnTSPrice;
         //    console.log(total);
         $("#total").text(total);
