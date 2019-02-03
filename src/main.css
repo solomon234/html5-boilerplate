@@ -21,7 +21,22 @@ body {
   font-size: 3.0vw !important;
   font-weight: bold;
 }
+.question2{
+  display: none;
+}
+.rxTable{
+  margin-top:10px;
+  font-size: .4em;
+  display: none;
+}
+ table{
+  border:1px black solid;
+}
+.prescription_table>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
 #blurContainer{
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
