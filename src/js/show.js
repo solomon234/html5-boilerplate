@@ -106,6 +106,7 @@ jQuery(document).ready(function() {
       $('.question2').toggle('fast');
       $('.rxTable').toggle('fast');
     } else {
+      alert('sadly we would need you to get a rx then come back!');
     }
   });
 
