@@ -97,7 +97,9 @@ jQuery(document).ready(function() {
       $('.question2').toggle('fast');
       $('.question1').toggle('fast');
     } else {
-      alert('Then leave!');
+      $('.question1').toggle();
+      $('#promptDialog').removeAttr('id');
+      $('#blurContainer').removeAttr('id');
     }
   });
 
@@ -106,7 +108,7 @@ jQuery(document).ready(function() {
       $('.question2').toggle('fast');
       $('.rxTable').toggle('fast');
     } else {
-      alert('sadly we would need you to get a rx then come back!');
+      alert('sadly we wou; need you to get a rx then come back!');
     }
   });
 

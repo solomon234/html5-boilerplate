@@ -51,22 +51,22 @@ body {
   background-color: rgba(0,0,0,0.5); /*dim the background*/
 }
 #promptDialog{
-  width:50vw;
-  height:50vh;
+  width: 64vw;
+  height: 55vh;
   background-color: white;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  position:absolute;
-  margin-top: 10%;
-  margin-left: 25%;
+  position: absolute;
   z-index: 11;
   -webkit-filter: blur(0);
--moz-filter: blur(0);
--o-filter: blur(0);
--ms-filter: blur(0);
-filter: blur(0);
+  -moz-filter: blur(0);
+  -o-filter: blur(0);
+  -ms-filter: blur(0);
+  filter: blur(0);
   font-family: 'Montserrat', sans-serif;
   font-size: .8em;
+  top: 20%;
+  left: 20%;
 }
 .questionContainer{
   width:80%;
@@ -75,7 +75,6 @@ filter: blur(0);
 .promptQuestions .confirmBtn{
   position: unset;
   float:left;
-
   width: 15%;
   font-size: .5em;
   padding: 4px 0;
@@ -84,7 +83,7 @@ filter: blur(0);
   margin: 2% 0 0 10%;
 }
 .promptQuestions {
-  height: 50%;
+ margin-top:10%;
 }
 /* ID's will be individually diaplying none*/
 #showLStyle, #showFrames, #showPLT, #showLAddOn, #showLMaterial {
