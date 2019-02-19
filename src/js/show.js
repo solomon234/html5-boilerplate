@@ -15,6 +15,64 @@ jQuery(document).ready(function() {
 
   $(function() {
 
+    //When two PD's are checked displays prescriptionospd
+    $('#monocularPD').change(function() {
+      $('#ospd').toggle();
+      $('#ospd').val($('#odpd').val());
+    });
+
+    //Confirm valid prescription
+    $('.rxTable .confirmBtn').on('click', function() {
+
+      switch ($(this).find('p').text()) {
+        case 'Back':
+          $('.question2').toggle('fast');
+          $('.rxTable').toggle('fast');
+          break;
+        case 'Clear':
+          $('#odsph').val('');
+          $('#odcyl').val('');
+          $('#odaxi').val('');
+          $('#odadd').val('');
+          $('#ossph').val('');
+          $('#oscyl').val('');
+          $('#osaxi').val('');
+          $('#osadd').val('');
+          $('#ospd').val('');
+          $('#odpd').val('');
+          break;
+        case 'Confirm':
+          if ($("#odsph").val() == '' || $("#ossph").val() == '') {
+            alert("Prescription not valid");
+          } else {
+            $('#promptDialog').removeAttr('id');
+            $('#blurContainer').removeAttr('id');
+            $('.rxTable').toggle();
+            break;
+          }
+        default:
+          break;
+          // code block
+      }
+    });
+
+    //When btnEquals is clicked the opposite row will be duplicated
+    $('.btnEquals').on('click', function() {
+      if ($(this).hasClass('eqOS')) {
+        $('#odsph').val($('#ossph').val());
+        $('#odcyl').val($('#oscyl').val());
+        $('#odaxi').val($('#osaxi').val());
+        $('#odadd').val($('#osadd').val());
+      } else {
+        $('#ossph').val($('#odsph').val());
+        $('#oscyl').val($('#odcyl').val());
+        $('#osaxi').val($('#odaxi').val());
+        $('#osadd').val($('#odadd').val());
+      }
+
+
+    });
+
     $('.lensImg li .optionContainer').on('click', function() {
       //  if (!$(this).parent().hasClass('lensImgSelect')) {
       /* Read in id tag name*/
@@ -108,7 +166,7 @@ jQuery(document).ready(function() {
       $('.question2').toggle('fast');
       $('.rxTable').toggle('fast');
     } else {
-      alert('sadly we wou; need you to get a rx then come back!');
+      alert('Unfortunately we need you to get a rx then come back!');
     }
   });
 

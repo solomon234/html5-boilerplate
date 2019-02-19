@@ -52,8 +52,9 @@
         </div>
       </div>
     </div>
-    <div class="promptQuestions rxTable">
-      <table border="0" width="100%" cellpadding="5" cellspacing="0" class="prescription_table table table-striped  table-bordered">
+    <div class="rxTable">
+      <h1>Please provide your prescription accurately</h1>
+      <table border="0" cellpadding="5" cellspacing="0" class="prescription_table table table-striped  table-bordered">
         <tbody>
           <tr class="rx-header">
             <td class="leftright-td">&nbsp;</td>
@@ -63,9 +64,9 @@
             <td>ADD</td>
           </tr>
           <tr>
-            <td class="leftright-td"> <b>O.D. <span class="desktop-leftright">(right)</span><span class="mobile-leftright">(R)</span></b> </td>
+            <td class="leftright-td"> <button class='btnEquals'>=</button><b>O.D.  (R)</b> </td>
             <td><span class="mobile-presc-label">SPH</span>
-              <select id="prescription['odsph']" name="prescription['odsph']">
+              <select id="odsph" name="prescription['odsph']">
                 <option value="" selected="selected"></option>
                 <option value="PLANO">PLANO</option>
                 <option value="-12.00">-12.00</option>
@@ -151,9 +152,10 @@
                 <option value="D.S.">D.S.</option>
                 <option value="SPH">SPH</option>
               </select>
+              <span style="color:red;"> *</span>
             </td>
             <td><span class="mobile-presc-label">CYL</span>
-              <select id="prescription['odcyl']" name="prescription['odcyl']">
+              <select id="odcyl" name="prescription['odcyl']">
                 <option value="" selected="selected"></option>
                 <option value="">NONE</option>
                 <option value="-4.00">-4.00</option>
@@ -194,7 +196,7 @@
               </select>
             </td>
             <td><span class="mobile-presc-label">AXIS</span>
-              <select name="prescription['odaxi']" id="prescription['odaxi']">
+              <select name="prescription['odaxi']" id="odaxi">
                 <option selected="selected"></option>
                 <option value="">NONE</option>
                 <option>001</option>
@@ -380,7 +382,7 @@
               </select>
             </td>
             <td><span class="mobile-presc-label">ADD</span>
-              <select name="prescription['odadd']" id="prescription['odadd']">
+              <select name="prescription['odadd']" id="odadd">
                 <option value="" selected="selected"></option>
                 <option value="">NONE</option>
                 <option value="+0.25">+0.25</option>
@@ -401,9 +403,9 @@
             </td>
           </tr>
           <tr>
-            <td class="leftright-td"> <b>O.S. <span class="desktop-leftright">(left)</span><span class="mobile-leftright">(L)</span></b></td>
+            <td class="leftright-td"><button class='btnEquals eqOS'>=</button><b>O.S.  (L)</b></td>
             <td><span class="mobile-presc-label">SPH</span>
-              <select id="prescription['ossph']" name="prescription['ossph']">
+              <select id="ossph" name="prescription['ossph']">
                 <option value="" selected="selected"></option>
                 <option value="PLANO">PLANO</option>
                 <option value="-12.00">-12.00</option>
@@ -489,9 +491,10 @@
                 <option value="D.S.">D.S.</option>
                 <option value="SPH">SPH</option>
               </select>
+              <span style="color:red;"> *</span>
             </td>
             <td><span class="mobile-presc-label">CYL</span>
-              <select id="prescription['oscyl']" name="prescription['oscyl']">
+              <select id="oscyl" name="prescription['oscyl']">
                 <option value="" selected="selected"></option>
                 <option value="">NONE</option>
                 <option value="-4.00">-4.00</option>
@@ -532,7 +535,7 @@
               </select>
             </td>
             <td><span class="mobile-presc-label">AXIS</span>
-              <select name="prescription['osaxi']" id="prescription['osaxi']">
+              <select name="prescription['osaxi']" id="osaxi">
                 <option selected="selected"></option>
                 <option value="">NONE</option>
                 <option>001</option>
@@ -718,7 +721,7 @@
               </select>
             </td>
             <td><span class="mobile-presc-label">ADD</span>
-              <select name="prescription['osadd']" id="prescription['osadd']">
+              <select name="prescription['osadd']" id="osadd">
                 <option value="" selected="selected"></option>
                 <option value="">NONE</option>
                 <option value="+0.25">+0.25</option>
@@ -746,9 +749,9 @@
             <td> </td>
           </tr>
           <tr>
-            <td><span class="desktop-leftright">Enter PD:</span><span class="mobile-leftright">PD:</span></td>
+            <td><span class="desktop-leftright"></span><span class="mobile-leftright">PD:</span></td>
             <td>
-              <select name="prescription['odpd']" id="prescription['odpd']">
+              <select name="prescription['odpd']" id="odpd">
                 <option selected="selected"></option>
                 <option>20</option>
                 <option>20.5</option>
@@ -868,7 +871,7 @@
               </select>
             </td>
             <td>
-              <select name="prescription['ospd']" style="display:none" id="prescriptionospd">
+              <select name="prescription['ospd']" style="display:none" id="ospd">
                 <option></option>
                 <option>20</option>
                 <option>20.5</option>
@@ -1011,10 +1014,19 @@
                 <option>89</option>
               </select>
             </td>
-            <td colspan="3" style="padding-left:8px !important;"> <input name="monocularPD" id="monocularPD" type="checkbox">I have two PD numbers</td>
+            <td colspan="3" style="padding-left:8px !important;"> <input name="monocularPD" id="monocularPD" type="checkbox"> Check if you have 2 PD's</td>
           </tr>
         </tbody>
       </table>
+      <div style='margin-top:15px;right:75%;'class="confirmBtn">
+        <p>Back</p>
+      </div>
+      <div style='margin-top:15px;right:40%;'class="confirmBtn">
+        <p>Clear</p>
+      </div>
+      <div style='margin-top:15px;right:7%;'class="confirmBtn">
+        <p>Confirm</p>
+      </div>
     </div>
   </div>
 

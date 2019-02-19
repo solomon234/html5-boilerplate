@@ -28,12 +28,27 @@ body {
   margin-top:10px;
   font-size: .4em;
   display: none;
+  margin-bottom: 10px;
 }
  table{
   border:1px black solid;
+  width: 60vw;
+}
+#ossph::after,#odsph::after{
+  content: " *";
+  color:red;
 }
 .prescription_table>tbody>tr:nth-of-type(odd) {
     background-color: #f9f9f9;
+}
+.btnEquals{
+  background-color: #3498db;
+  color: white;
+  border-radius: 15%;
+  border: 1px solid rgb(52, 152, 219);
+  font-weight: bold;
+  cursor: pointer;
+  float: left;
 }
 #blurContainer{
   pointer-events: none;
