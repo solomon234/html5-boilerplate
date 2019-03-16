@@ -21,6 +21,11 @@ body {
   font-size: 3.0vw !important;
   font-weight: bold;
 }
+.endMsg{
+  display: none;
+  font-size: 1em;
+  color:#0b5ca2;
+}
 .question2{
   display: none;
 }
@@ -87,6 +92,7 @@ body {
   width:80%;
   margin-left: 25%;
 }
+
 .promptQuestions .confirmBtn{
   position: unset;
   float:left;
@@ -341,11 +347,39 @@ table select:focus{
   padding-bottom: 30px;
 }
 
-@media screen and (max-device-width: 1024px) {
-  .aside-container {
+@media screen and (max-width: 1080px) {
+  .container {
+    font-size: 2vw;
+  }
+  #promptDialog{
+    font-size: 5vw;
+    left:12%;
+    width:75%;
+  }
+  table{
+    width:69vw;
+  }
+  .rxTable .confirmBtn{
+    width:20%;
+  }
+  .txtDesc {
+    font-size: 1.5vw;
+    position: absolute;
+    width: 80%;
+    left: 20%;
+    top: 39%;
+    text-align: left;
+  }
+  .confirmBtn {
+    right: 10%;
+    margin-bottom: 15px;
+    width:35%;
 
+  }
+  .aside-container {
     position: unset;
     width: 10vw;
+    padding: 20px;
   }
 
   .aside-container p {
@@ -355,7 +389,7 @@ table select:focus{
    .aside-container {
     position: unset;
     width: 83vw;
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   .asideData {
@@ -380,24 +414,21 @@ table select:focus{
   }
 
   .optionContainer img {
-    width: 28%;
+    width: 20%;
   }
 
   .botLine {
-    width: 70%;
+    width: 80%;
   }
 
   .optionContainer {
     font-size: 2.5em;
     height: 12vh;
-    width: 70vw;
+    width: 100%;
 
   }
-
-  .txtDesc {
-    font-size: .3em;
-    width: 70%;
-    left:26%;
+  .endMsg{
+    display: none;
   }
 
   .toggle-btn {

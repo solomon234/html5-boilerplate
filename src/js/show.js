@@ -113,7 +113,13 @@ jQuery(document).ready(function() {
           $('.progData').parent().toggle();
           $('#' + option).toggle('fast');
           $('.progLI').show('fast').children().show('fast');
-        } else {
+        } else if (data != "Progressive" && $('.progData').parent().css('display') == 'block'){
+            $('.progData').parent().toggle();
+            progressivePrice = 0;
+            $('.progLI').hide('fast').children().hide('fast');
+            $('#' + option).toggle('fast');
+        }
+        else {
           $('#' + option).toggle('fast');
           $('.lensMatLI').show('fast').children().show('fast');
         }
@@ -123,27 +129,29 @@ jQuery(document).ready(function() {
         $(".progData").text(data);
         $('#' + option).toggle('fast');
         $('.lensMatLI').show('fast').children().show('fast');
+
         /*  showLMaterial option */
       } else if (option == 'showLMaterial') {
         lensMaterialPrice = parseInt(price);
         $(".materialData").text(data);
         $('#' + option).toggle('fast');
-        $('.lensAddLI').show('fast').children().show('fast');
+        $('.lensAddLI').show('fast');
+        $('#showLAddOn2').hide('fast');
         /*  showLAddOn option */
       } else if (option == 'showLAddOn1') {
         // Multiple add-ons selection
         lensAddOnARPrice = parseInt(price);
         $(".addOnData1").text(data);
+        $('#showLAddOn1').hide('fast');
+        $('#showLAddOn2').show('fast');
+
       } else if (option == 'showLAddOn2') {
         lensAddOnTSPrice = parseInt(price);
         $(".addOnData2").text(data);
+        $('#showLAddOn2').hide('fast');
+        $('.endMsg').show('fast');
       }
 
-      /* If i wanna add a  breadcrumb this would help
-      --------------------------------------------------------------
-      steps.after("<div class='step current' >" + data + " </div>");
-      steps = steps.nextAll(':first').addClass('current');
-      */
       updatePrice();
 
     });
@@ -179,15 +187,11 @@ jQuery(document).ready(function() {
   });
 
   function updatePrice() {
-    if (!lensAddOnARPrice.length) {
-      lensAddOnARPrice = 0;
-    }
-    if (!lensAddOnTSPrice.length) {
-      lensAddOnTSPrice = 0;
-    }
+    lensAddOnARPrice = isNaN(lensAddOnARPrice) ? 0 : lensAddOnARPrice;
+    lensAddOnTSPrice = isNaN(lensAddOnTSPrice) ? 0 : lensAddOnTSPrice;
 
     var total = framePrice + lenStylePrice + progressivePrice + lensMaterialPrice + lensAddOnARPrice + lensAddOnTSPrice;
-    //    console.log(total);
+
     $("#total").text(total);
   }
 })
